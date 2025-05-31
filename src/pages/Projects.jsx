@@ -167,6 +167,19 @@ const allProjects = [
     tag: 'Modding',
   },
   {
+    title: "Twilight Zone",
+    subtitle: "",
+    img: '/assets/Twilight.png',
+    description: 'My very first published game',
+    rows: [
+      { content: <p><b>Published:</b> Dec 13th 2024</p> },
+      { content: <p><b>Updated:</b> Dec 13th 2024</p> },
+    ],
+    linkUrl: 'https://revilodev.itch.io/twilightzone',
+    linkname: 'Visit', 
+    tag: 'Games',
+  },
+  {
     title: "Nothing here... yet",
     subtitle: "",
     img: '/assets/revilo.png',
@@ -175,6 +188,7 @@ const allProjects = [
     linkname: 'Visit', 
     tag: 'Software',
   },
+
 ];
 
   {/* template
@@ -194,7 +208,7 @@ const allProjects = [
   */}
 
 function Projects() {
-  const tags = ['Websites', 'Modding', 'Software', 'Other']; // Define tags
+  const tags = ['Websites', 'Modding', 'Software', 'Games']; // Define tags
 
   const [selectedTag, setSelectedTag] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState(allProjects);
