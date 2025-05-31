@@ -9,7 +9,7 @@ const TagSelector = ({ tags, onTagSelect }) => {
   };
 
   return (
-    <div className="flex space-x-4 mb-8 overflow-x-auto overflow-y-hidden">
+    <div className="flex justify-center space-x-4 mb-8 overflow-y-hidden overflow-x-auto  p-5 max-sm:pl-[14rem]">
       <button
         className={`btn ${selectedTag === 'All' ? 'btn-primary' : 'btn-soft'} AH-Underline`}
         onClick={() => handleTagClick('All')}

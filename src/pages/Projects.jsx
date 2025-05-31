@@ -229,9 +229,7 @@ function Projects() {
     <div className="body">
       <HeaderCard />
       <br />
-      <div className="flex justify-center A-SlideDownBounce">
-          <TagSelector tags={tags} onTagSelect={handleTagSelect} />
-      </div>
+      <div className="flex justify-center w-1/1 A-SlideDownBounce"><TagSelector className='justify-center' tags={tags} onTagSelect={handleTagSelect} /></div>
       <div className="content A-SlideUpBounce">
 
         <br />
