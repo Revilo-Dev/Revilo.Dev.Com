@@ -143,7 +143,7 @@ const allProjects = [
     tag: 'Modding',
   },
   {
-    title: "StardewUI Oct 11th 2025",
+    title: "StardewUI",
     subtitle: "Stardew theme for minecraft",
     img: '/assets/Stardew-pack.png',
     description: '',

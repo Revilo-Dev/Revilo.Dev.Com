@@ -14,7 +14,7 @@ const HeaderCard = () => {
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
         <a href='https://github.com/Revilo-Dev/Revilo.Dev.com' ><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline'>Revilo.Dev</h1></a>
         <p className='text-sm text-zinc-400 m-1 p-0'>I write code, develop modpacks, and design stuff.</p>
-        <p className='mb-4'>Im Revilo.Dev, i specialize in Web development, Im Fluent in HTML CSS React and java script. Im a content creator on Curseforge and Modrinth amassing over 58K downloads on my projects creating Modpack experiences and texture packs. Im also affiliated with kinetic hosting. Ive done some freelance work, creating website / software demos. I am a Polish student living in Australia</p>
+        <p className='mb-4'>Im Revilo.Dev, i specialize in Web development, Im Fluent in HTML CSS React and java script. Im a content creator on Curseforge and Modrinth amassing over 62K downloads on my projects creating Modpack experiences and texture packs. Im also affiliated with kinetic hosting. Ive done some freelance work, creating website / software demos. I am a Polish student living in Australia</p>
         <div className='flex space-x-4 mb-4'>
         <a href="https://github.com/Revilo-Dev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
         <a href="https://www.figma.com/@revilodev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Figma"><FontAwesomeIcon icon={faFigma} /></a>
