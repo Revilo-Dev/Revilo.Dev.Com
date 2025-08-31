@@ -13,14 +13,14 @@ const HeaderCard = () => {
       <img className='AH-Pulse rounded-3xl w-40 h-40 md:w-65 md:h-65 object-cover mb-6 md:mb-0 md:mr-8 border-4 border-primary mx-auto md:mx-0 self-center' src="/assets/revilo.png" alt="Revilo.Dev Icon" />
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
         <a href='https://github.com/Revilo-Dev/Revilo.Dev.com' ><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline'>Revilo.Dev</h1></a>
-        <p className='text-sm text-zinc-400 m-1 p-0'>I write code, develop modpacks, and design stuff.</p>
-        <p className='mb-4'>Im Revilo.Dev, i specialize in Web development, Im Fluent in HTML CSS React and java script. Im a content creator on Curseforge and Modrinth amassing over 66K downloads on my projects creating Modpack experiences and texture packs. Im also affiliated with kinetic hosting. Ive done some freelance work, creating website / software demos. Im a Polish Austrlian student</p>
+        <p className='text-sm text-zinc-400 m-1 p-0'>A creator with a passion for programming, modding, and design.</p>
+        <p className='mb-4'>I'm Revilo.Dev, A polish programmer and creator, I have experience in web development, learning languages such as HTML, CSS and JavaScript, creating most of my projects in React. I'm experienced in Java through Minecraft modding where I have amassing over 68K downloads through my projects, I'm also affiliated with kinetic hosting servers. I'm very much into graphic design creating UI, graphics and Designs for most of my projects, refining my skills through creating UI redesign concepts. I've done some freelance work, creating website / software demos and have experience in properly managing and maintaining projects. </p>
         <div className='flex space-x-4 mb-4'>
         <a href="https://github.com/Revilo-Dev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
         <a href="https://www.figma.com/@revilodev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Figma"><FontAwesomeIcon icon={faFigma} /></a>
-        <a href="#" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Discord"><FontAwesomeIcon icon={faDiscord} /></a>
+        <a href="https://discord.gg/DARzByw6VW" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Discord"><FontAwesomeIcon icon={faDiscord} /></a>
         <a href="https://x.com/ReviloDev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="X/Twitter"><FontAwesomeIcon icon={faXTwitter} /></a>
-        <a href="https://www.reddit.com/user/revilo224/" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Reddit"><FontAwesomeIcon icon={faReddit} /></a>
+        <a href="https://www.reddit.com/user/revilodev/" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Reddit"><FontAwesomeIcon icon={faReddit} /></a>
         <a href="#" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
         </div>
         <div className=' AH-Pulse AH-Underline flex items-center text-zinc-400 hover:text-primary'>

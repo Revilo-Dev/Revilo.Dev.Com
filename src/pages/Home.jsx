@@ -14,7 +14,7 @@ function Home() {
         <InfoCard
           title={"Programming Languages"}
           subtitle={"My knowlege in programming languages"}
-          row1={<p><b>Basic knowlegde:</b> Python, C# </p>}
+          row1={<p><b>Fundamentals:</b> Python, C# </p>}
           row2={<p><b>Intermediate:</b> Java.Script, Swift, Java</p>}
           row3={<p><b>Experienced:</b> GD.Script, HTML, CSS, React.JS </p>}
         />
@@ -30,15 +30,15 @@ function Home() {
         <InfoCard
         title={"Software"}
         subtitle={"Software im experienced in using"}
-        row1={<p>Firebase Studio <b>:</b> Github <b>:</b> Figma <b>:</b> Godot <b>:</b> Visual Studio <b>:</b> Firebase hosting <b>:</b> Asprite</p>}
+        row1={<p>Intellij Idea <b>:</b> Firebase Studio <b>:</b> Github <b>:</b> Figma <b>:</b> Godot <b>:</b> Visual Studio <b>:</b> Firebase hosting <b>:</b> MongoDB <b>:</b> Asprite</p>}
         />
 
         <InfoCard
-        title={"Hobbies"}
-        subtitle={"My hobbies and interests"}
-        row1={<p><b>Development:</b> Mainly Fullstacks development with prior knowlegde in game development</p>}
-        row2={<p><b>Modding:</b> I create and maintain modded minecraft experiences on Curseforge</p>}
-        row3={<p><b>Design:</b> I design all my own assets and graphics on Figma, I like creating UI concepts and redesigns</p>}
+        title={"Skills"}
+        subtitle={"My skills and interests"}
+        row1={<p><b>Development:</b> Ive created multiple fullstack web applications and refine my skills in creation every day</p>}
+        row2={<p><b>Modding:</b> Im a Java minecraft modder, which tought me how to properly develop manage and plan large projects</p>}
+        row3={<p><b>Design:</b> Desining all my own assets and graphics on Figma, ive learned key graphic design principles and refine my abilites constantly</p>}
         
         />
         

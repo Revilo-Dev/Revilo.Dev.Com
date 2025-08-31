@@ -71,12 +71,24 @@ const allProjects = [
     tag: 'Websites',
   },
   {
+    title: "RUNIC",
+    subtitle: "Find vanilla's Enchantment system to be boring and too OP? This Mod solves that in an RPG like way completely redefining what upgrading gear is like in Minecraft!",
+    img: '/assets/runic.png',
+    description: '',
+    rows: [
+      { content: <p><b>Published:</b> Aug 30th 2025</p> },
+    ],
+    linkUrl: 'https://www.curseforge.com/minecraft/mc-mods/runic-enhancements',
+    linkname: 'Visit', 
+    tag: 'Modding',
+  },
+  {
     title: "Mythcraft",
     subtitle: "All About: Exploration - Questing - Looting - Progression. Minecraft 1.21 like never before",
     img: '/assets/MC5.png',
     description: '',
     rows: [
-      { content: <p><b>Published:</b>Dec 12th 2022</p> },
+      { content: <p><b>Published:</b> Dec 12th 2022</p> },
     ],
     linkUrl: 'https://www.curseforge.com/minecraft/modpacks/mythcrafts',
     linkname: 'Visit', 
@@ -168,9 +180,9 @@ const allProjects = [
   },
   {
     title: "Twilight Zone",
-    subtitle: "",
+    subtitle: "My very first published game",
     img: '/assets/Twilight.png',
-    description: 'My very first published game',
+    description: '',
     rows: [
       { content: <p><b>Published:</b> Dec 13th 2024</p> },
       { content: <p><b>Updated:</b> Dec 13th 2024</p> },
