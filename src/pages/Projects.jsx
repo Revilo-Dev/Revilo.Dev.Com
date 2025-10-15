@@ -14,7 +14,7 @@ const allProjects = [
       { content: <p><b>Published:</b> Jan 8th 2025 </p> },
       { content: <p><b>Updated:</b> June 1st 2025</p> },
     ],
-    linkUrl: 'https://revilodev.web.app/',
+    linkUrl: 'https://revilodev.com/',
     linkname: 'Visit', 
     tag: 'Websites',
   },
