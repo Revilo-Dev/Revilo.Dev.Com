@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderCard from '../components/HeaderCard';
 import InfoCard from '../components/InfoCard';
 
-function Home() {
+function About() {
 
     return (
       <>
@@ -48,4 +48,4 @@ function Home() {
     )
   }
 
-export default Home;
+export default About;

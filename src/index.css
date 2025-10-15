@@ -69,24 +69,22 @@ nav {
   margin-left: 6px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 850px) {
+
+  .ThemeButton {
+    bottom: 84px;
+    left: 13px; 
+  }
+
+
+}
+
+@media (max-width: 660px) {
   .label {
     display: none;
   }
-  .ThemeButton {
-    left: 18px; 
-  }
-  .btn {
-    justify-content: center;
-    padding: 5px;
-    padding: 0.6rem;
-  }
-  .NavBar {
-    width: 60vw;
-  }
+
 }
-
-
 
 
 

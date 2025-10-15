@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import useThemeStore from './store/ThemeStore.js';
 import ThemeDropdown from './components/ThemeDropDown.jsx';
 import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Links from './pages/Links.jsx';
 import NoMatch from './pages/NoMatch.jsx';
@@ -23,7 +24,7 @@ function App() {
               <HomeIcon className="icon" />
               <span className="label">Home</span>
             </Link>
-            <Link className="btn btn-soft AH-Underline" to="/">
+            <Link className="btn btn-soft AH-Underline" to="/About">
               <Info className="icon" />
               <span className="label">About</span>
             </Link>
@@ -48,6 +49,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Links" element={<Links />} />
           <Route path="*" element={<NoMatch />} />
