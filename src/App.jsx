@@ -8,21 +8,43 @@ import Links from './pages/Links.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import Footer from './components/Footer';
 
+import { Home as HomeIcon, Info, Folder, Hammer, Link as LinkIcon } from 'lucide-react';
 
 function App() {
-  const {theme} = useThemeStore()
+  const { theme } = useThemeStore();
+
   return (
     <Router>
-      <div data-theme={theme} className='bg-base-200 min-h-max flex flex-col'>
-        
-        <nav className='TransparentUI'>
-          <div className='flex justify-center w-full gap-1'>
-            <Link className='btn btn-soft AH-Underline' to="/">Home</Link>
-            <Link className='btn btn-soft AH-Underline' to="/Projects">Projects</Link>
-            <Link className='btn btn-soft AH-Underline' to="/Links">Links</Link>
+      <div data-theme={theme} className="bg-base-200 min-h-max flex flex-col">
+
+        <nav>
+          <div className="NavBar">
+            <Link className="btn btn-soft AH-Underline" to="/">
+              <HomeIcon className="icon" />
+              <span className="label">Home</span>
+            </Link>
+            <Link className="btn btn-soft AH-Underline" to="/">
+              <Info className="icon" />
+              <span className="label">About</span>
+            </Link>
+            <Link className="btn btn-soft AH-Underline" to="/Projects">
+              <Folder className="icon" />
+              <span className="label">Projects</span>
+            </Link>
+            <Link className="btn btn-soft AH-Underline" to="/Projects">
+              <Hammer className="icon" />
+              <span className="label">Modding</span>
+            </Link>
+            <Link className="btn btn-soft AH-Underline" to="/Links">
+              <LinkIcon className="icon" />
+              <span className="label">Links</span>
+            </Link>
           </div>
-          <ThemeDropdown/>
-        </nav> 
+        </nav>
+
+        <div className="ThemeButton">
+          <ThemeDropdown />
+        </div>
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,10 +56,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-    
   );
 }
 
-
 export default App;
-

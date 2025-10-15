@@ -5,7 +5,7 @@ import React from 'react';
 const InfoCard = ({ title, description, subtitle, img, imgAlt, linkUrl, linkname, row1, row2, row3, row4 }) => {
 
   return (  
-    <div className="relative flex bg-base-300 shadow-xl rounded-lg p-4 mb-6 text-left border-1 border-black flex-row items-center AH-Expand">
+    <div className="relative flex bg-base-300 shadow-xl rounded-lg p-4 mb-6 text-left flex-row items-center AH-Expand">
       <div className="flex-grow mr-4 flex-shrink min-w-0 pb-10"> 
 
         <h2 className="text-base min-[410px]:text-lg md:text-xl font-bold text-primary mb-0">{title}</h2>

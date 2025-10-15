@@ -28,20 +28,72 @@
 
 nav {
   display: flex;
-  align-content: right;
-  padding: 10px;
   position: fixed;
-  width: 100%;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
-  gap: 10px;
-  top: 0;
-  left: 0;
-  align-content: center;
 }
+
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: min(90vw, 600px);
+  padding: 10px 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.568);
+  backdrop-filter: blur(12px);
+}
+
+.ThemeButton {
+  position: fixed;
+  bottom: 16px;
+  left: 56px;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  margin-left: 6px;
+}
+
+@media (max-width: 640px) {
+  .label {
+    display: none;
+  }
+  .ThemeButton {
+    left: 18px; 
+  }
+  .btn {
+    justify-content: center;
+    padding: 5px;
+    padding: 0.6rem;
+  }
+  .NavBar {
+    width: 60vw;
+  }
+}
+
+
+
+
 
 .TransparentUI {
   background-color: var(--color-base-200);
 }
+
 
 .body {
   display: flex;

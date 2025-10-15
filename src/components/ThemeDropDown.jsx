@@ -13,13 +13,13 @@ function ThemeDropdown() {
 
   return (
     <div className="ml-auto">
-      <div className="dropdown dropdown-end">
+      <div className="dropdown dropdown-top">
         <div tabIndex={0} role="button" className=" ThemeBtn btn btn-primary AH-Pulse">
         <LayoutGrid />
         </div>
         <ul
           tabIndex={0}
-          className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 max-h-96 overflow-y-auto sm:w-64 md:w-72 A-SlideDownBounce"
+          className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 max-h-96 overflow-y-auto sm:w-64 md:w-72 A-SlideUpBounce"
         >
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-3 md:grid-cols-3">
             {themeList.map((themeName) => (
