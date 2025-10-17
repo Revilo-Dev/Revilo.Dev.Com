@@ -72,11 +72,23 @@ const allProjects = [
   },
   {
     title: "RUNIC",
-    subtitle: "Find vanilla's Enchantment system to be boring and too OP? This Mod solves that in an RPG like way completely redefining what upgrading gear is like in Minecraft!",
+    subtitle: "Find vanilla's Enchantment system to be boring and unbalanced? This Mod solves that in an RPG like way completely redefining what upgrading gear is like in Minecraft!",
     img: '/assets/runic.png',
     description: '',
     rows: [
       { content: <p><b>Published:</b> Aug 30th 2025</p> },
+    ],
+    linkUrl: 'https://www.curseforge.com/minecraft/mc-mods/runic-enhancements',
+    linkname: 'Visit', 
+    tag: 'Modding',
+  },
+  {
+    title: "Boundless Quests",
+    subtitle: "Quests in Minecraft: Perfect for modpack creators and Goal setters",
+    img: '/assets/Boundless.png',
+    description: '',
+    rows: [
+      { content: <p><b>Published:</b> Sep 23rd 2025</p> },
     ],
     linkUrl: 'https://www.curseforge.com/minecraft/mc-mods/runic-enhancements',
     linkname: 'Visit', 

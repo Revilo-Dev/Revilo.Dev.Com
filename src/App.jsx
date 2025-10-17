@@ -5,11 +5,20 @@ import ThemeDropdown from './components/ThemeDropDown.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
+import Modding from './pages/Modding.jsx';
 import Links from './pages/Links.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import Footer from './components/Footer';
-
 import { Home as HomeIcon, Info, Folder, Hammer, Link as LinkIcon } from 'lucide-react';
+import AboutRunic from './pages/modding/runic/aboutrunic.jsx';
+import AboutBoundless from './pages/modding/boundless/aboutboundless.jsx';
+import RunicWiki from './pages/modding/runic/runicwiki.jsx';
+import BoundlessWiki from './pages/modding/boundless/boundlesswiki.jsx';
+
+
+
+
+
 
 function App() {
   const { theme } = useThemeStore();
@@ -32,7 +41,7 @@ function App() {
               <Folder className="icon" />
               <span className="label">Projects</span>
             </Link>
-            <Link className="btn btn-soft AH-Underline" to="/Projects">
+            <Link className="btn btn-soft AH-Underline" to="/Modding">
               <Hammer className="icon" />
               <span className="label">Modding</span>
             </Link>
@@ -51,9 +60,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/Modding" element={<Modding />} />
           <Route path="/Links" element={<Links />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/About-Runic" element={<AboutRunic />} />
+          <Route path="/About-Boundless" element={<AboutBoundless />} />
+          <Route path="/Runic-Wiki" element={<RunicWiki />} />
+          <Route path="/Boundless-Wiki" element={<BoundlessWiki />} />
+          <Route path="/Links" element={<Links />} />
         </Routes>
+
 
         <Footer />
       </div>

@@ -1,51 +1,45 @@
 import React from 'react';
 import HeaderCard from '../components/HeaderCard';
-import InfoCard from '../components/InfoCard';
+import ItemCard from '../components/ItemCard';
+import { Info, BookOpen, Link as LinkIcon } from 'lucide-react';
 
-function Home() {
-
-    return (
-      <>
-      <div className="body">
-          <HeaderCard/>
-        <br></br>
-        <div className="content A-SlideUpBounce">
-
-        <InfoCard
-          title={"Programming Languages"}
-          subtitle={"My knowlege in programming languages"}
-          row1={<p><b>Fundamentals:</b> Python, C# </p>}
-          row2={<p><b>Intermediate:</b> Java.Script, Swift, Java</p>}
-          row3={<p><b>Experienced:</b> GD.Script, HTML, CSS, React.JS </p>}
-        />
-
-        <InfoCard
-        title={"Framworks / Libraries / Plugins"}
-        subtitle={"My experience with frameworks, libraries and plugins"}
-        row1={<p><b>Frameworks:</b> Tailwind.CSS</p>}
-        row2={<p><b>Libraries:</b> React <b>:</b> Zustand <b>:</b> React DOM <b>:</b> React-Router-Dom <b>:</b> Lucide </p>}
-        row3={<p><b>Plugins:</b> DaisyUI</p>}
-        />
-  
-        <InfoCard
-        title={"Software"}
-        subtitle={"Software im experienced in using"}
-        row1={<p>Intellij Idea <b>:</b> Firebase Studio <b>:</b> Github <b>:</b> Figma <b>:</b> Godot <b>:</b> Visual Studio <b>:</b> Firebase hosting <b>:</b> MongoDB <b>:</b> Asprite</p>}
-        />
-
-        <InfoCard
-        title={"Skills"}
-        subtitle={"My skills and interests"}
-        row1={<p><b>Development:</b> Ive created multiple fullstack web applications and refine my skills in creation every day</p>}
-        row2={<p><b>Modding:</b> Im a Java minecraft modder, which tought me how to properly develop manage and plan large projects</p>}
-        row3={<p><b>Design:</b> Desining all my own assets and graphics on Figma, ive learned key graphic design principles and refine my abilites constantly</p>}
-        
-        />
-        
+function Modding() {
+  return (
+    <div className="body">
+      <HeaderCard />
+      <div className="content A-SlideDownBounce mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ItemCard
+            image="/assets/runic.png"
+            title="Runic: Enchantments"
+            links={[
+              { label: 'About', to: '/About-Runic', icon: Info },
+              { label: 'Wiki', to: '/Runic-Wiki', icon: BookOpen },
+              { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/runic-enhancements', icon: LinkIcon },
+            ]}
+          />
+          <ItemCard
+            image="/assets/Boundless.png"
+            title="Boundless: Quests"
+            links={[
+              { label: 'About', to: '/About-Boundless', icon: Info },
+              { label: 'Wiki', to: '/Boundless-Wiki', icon: BookOpen },
+              { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
+            ]}
+          />
+          <ItemCard
+            image="/assets/MC5.png"
+            title="Mythcraft 5"
+            links={[
+              { label: 'About', to: 'https://www.curseforge.com/minecraft/modpacks/mythcrafts', icon: Info },
+              { label: 'Wiki', to: 'https://www.curseforge.com/minecraft/modpacks/mythcrafts', icon: BookOpen },
+              { label: 'Link', to: 'https://www.curseforge.com/minecraft/modpacks/mythcrafts', icon: LinkIcon },
+            ]}
+          />
+        </div>
       </div>
-      </div>
-      </>
-    )
-  }
+    </div>
+  );
+}
 
-export default Home;
+export default Modding;
