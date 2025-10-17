@@ -25,7 +25,7 @@ function ThemeDropdown() {
             {themeList.map((themeName) => (
               <button
                 key={themeName}
-                className={`flex flex-col items-center justify-center AH-Glow p-2 rounded-md shadow-sm transition-colors hover:ring-2 hover:ring-accent-500 text-sm capitalize ${themeName}`}
+                className={`flex flex-col items-center justify-center AH-Expand p-2 rounded-md shadow-sm transition-colors text-sm capitalize ${themeName}`}
                 onClick={() => setTheme(themeName)}
                 style={{ color: 'inherit', backgroundColor: 'var(--b1)' }}
               >

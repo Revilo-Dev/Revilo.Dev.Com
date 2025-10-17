@@ -8,13 +8,16 @@ function Modding() {
     <div className="body">
       <HeaderCard />
       <div className="content A-SlideDownBounce mt-6">
+      <h1> THIS PAGE IS UNDER DEVELOPMENT </h1>
+      <h1>----------</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
           <ItemCard
             image="/assets/runic.png"
             title="Runic: Enchantments"
             links={[
-              { label: 'About', to: '/About-Runic', icon: Info },
-              { label: 'Wiki', to: '/Runic-Wiki', icon: BookOpen },
+              { label: 'About', to: 'UNDER-CONSTRUCTION/About-Runic', icon: Info },
+              { label: 'Wiki', to: 'UNDER-CONSTRUCTION/Runic-Wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/runic-enhancements', icon: LinkIcon },
             ]}
           />
@@ -22,8 +25,8 @@ function Modding() {
             image="/assets/Boundless.png"
             title="Boundless: Quests"
             links={[
-              { label: 'About', to: '/About-Boundless', icon: Info },
-              { label: 'Wiki', to: '/Boundless-Wiki', icon: BookOpen },
+              { label: 'About', to: 'UNDER-CONSTRUCTION/About-Boundless', icon: Info },
+              { label: 'Wiki', to: 'UNDER-CONSTRUCTION/Boundless-Wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
             ]}
           />
