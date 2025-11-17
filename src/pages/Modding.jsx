@@ -25,8 +25,8 @@ function Modding() {
             image="/assets/Boundless.png"
             title="Boundless: Quests"
             links={[
-              { label: 'About', to: 'UNDER-CONSTRUCTION/About-Boundless', icon: Info },
-              { label: 'Wiki', to: 'UNDER-CONSTRUCTION/Boundless-Wiki', icon: BookOpen },
+              { label: 'About', to: '/About-Boundless', icon: Info },
+              { label: 'Wiki', to: '/Boundless-Wiki', icon: BookOpen },              
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
             ]}
           />

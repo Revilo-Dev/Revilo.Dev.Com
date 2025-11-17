@@ -5,7 +5,7 @@ import HeaderCard from '../../../components/HeaderCard.jsx';
 function BoundlessWiki() {
   return (
     <div className="body">
-      <HeaderCard />
+
 
 
     </div>
