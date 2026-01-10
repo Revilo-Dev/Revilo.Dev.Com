@@ -5,6 +5,7 @@ import '../index.css';
 import '../App.css';
 import '../Animate.css';
 import { faDiscord, faFigma, faGithub, faLinkedin, faReddit, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const HeaderCard = () => {
   return (
@@ -13,13 +14,16 @@ const HeaderCard = () => {
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
         <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>Revilo.Dev</h1></a>
         <p className='text-sm text-zinc-400 m-1 p-0 max-[420px]:text-xs'>A creator with a passion for programming, modding, and design.</p>
-        <p className='mb-4 max-[420px]:text-sm max-[420px]:leading-snug'>I'm Revilo.Dev, A polish programmer and creator, I have experience in web development, learning languages such as HTML, CSS and JavaScript, creating most of my projects in React. I'm experienced in Java through Minecraft modding where I have amassing over 74K downloads through my projects, I'm also affiliated with kinetic hosting servers. I'm into graphic design creating UI, graphics and Designs for most of my projects, refining my skills through creating UI redesign concepts. Ive Worked Multiple areas of Development such as Modding, Software and Game Dev. I've done some freelance work, creating website / software demos and have experience in properly managing and maintaining projects.</p>
+        <p className='mb-4 max-[420px]:text-sm max-[420px]:leading-snug'>I'm Revilo.Dev, An independent polish programmer and creator, I have experience in web development, creating most of my projects in React. I have gained experienced in Java through Minecraft modding where I have amassing over 800K downloads through my projects, I'm also affiliated with kinetic hosting servers. I do graphic design and UX, gaining experience through creating my own UIs, UX and graphics for all of my projects, further refining my skills through creating UI redesign concepts. Ive Worked Multiple areas of Development such as Modding, Web Development and Game Development. I've done some freelance work, creating website / software demos and have experience in properly managing and maintaining projects.</p>
+        <div className='flex items-center mb-4'>
+          <FontAwesomeIcon icon={faLocationDot} className="mr-2"/> <span><b>Australia | QLD</b></span>
+        </div>
         <div className='flex space-x-4 mb-4'>
           <a href="https://github.com/Revilo-Dev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
           <a href="https://www.figma.com/@revilodev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow max-[420px]:hidden" aria-label="Figma"><FontAwesomeIcon icon={faFigma} /></a>
           <a href="https://discord.gg/DARzByw6VW" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="Discord"><FontAwesomeIcon icon={faDiscord} /></a>
           <a href="https://x.com/ReviloDev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="X/Twitter"><FontAwesomeIcon icon={faXTwitter} /></a>
-          <a href="https://www.reddit.com/user/revilodev/" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow max-[420px]:hidden" aria-label="Reddit"><FontAwesomeIcon icon={faReddit} /></a>
+          <a href="https.www.reddit.com/user/revilodev/" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow max-[420px]:hidden" aria-label="Reddit"><FontAwesomeIcon icon={faReddit} /></a>
           <a href="#" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
         </div>
         <div className='AH-Pulse AH-Underline flex items-center text-zinc-400 hover:text-primary max-[420px]:text-sm'>

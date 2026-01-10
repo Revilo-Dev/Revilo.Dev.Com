@@ -12,35 +12,48 @@ function About() {
         <div className="content A-SlideUpBounce">
 
         <InfoCard
-          title={"Programming Languages"}
-          subtitle={"My knowlege in programming languages"}
-          row1={<p><b>Fundamentals:</b> Python, C# </p>}
-          row2={<p><b>Intermediate:</b> Java.Script, Swift, Java</p>}
-          row3={<p><b>Experienced:</b> GD.Script, HTML, CSS, React.JS </p>}
+          title={"Core Stack"}
+          subtitle={"Languages & tools I use to ship my projects"}
+          row1={<p><b>Primary:</b> JavaScript / TypeScript, React, HTML, CSS</p>}
+          row2={<p><b>Backend / Data:</b> Firebase, MongoDB, REST APIs</p>}
+          row3={<p><b>Also used:</b> Java, Python, C#, Swift, GDScript</p>}
+        />
+        <InfoCard
+          title={"Frontend & UI Engineering"}
+          subtitle={"Component-driven UI with modern styling workflows"}
+          row1={<p><b>UI:</b> React, React Router, React DOM</p>}
+          row2={<p><b>State:</b> Zustand</p>}
+          row3={<p><b>Styling:</b> Tailwind CSS, DaisyUI, Lucide Icons</p>}
+        />
+        <InfoCard
+          title={"Game Dev & Modding"}
+          subtitle={"Large-scale systems, content pipelines, and live updates"}
+          row1={<p><b>Java Modding:</b> Minecraft mods/modpacks with long-term support</p>}
+          row2={<p><b>Scale:</b> 800K+ total downloads across published projects</p>}
+          row3={<p><b>Game Dev:</b> Godot + published prototypes / demos</p>}
+        />
+        <InfoCard
+          title={"Product Design (UI/UX)"}
+          subtitle={"I design interfaces that feel clean, modern, and usable"}
+          row1={<p><b>Tools:</b> Figma, Aseprite</p>}
+          row2={<p><b>Focus:</b> Layout, hierarchy, readability, interaction flow</p>}
+          row3={<p><b>Practice:</b> UI redesign concepts to improve clarity + polish</p>}
+        />
+        <InfoCard
+          title={"Delivery & Workflow"}
+          subtitle={"How I build, maintain, and ship projects"}
+          row1={<p><b>Dev Tools:</b> IntelliJ IDEA, Visual Studio, GitHub</p>}
+          row2={<p><b>Deployment:</b> Firebase Hosting, hosted web demos</p>}
+          row3={<p><b>Project Work:</b> Planning, iteration, maintenance, updates</p>}
+        />
+        <InfoCard
+          title={"Freelance & Collaboration"}
+          subtitle={"Client-style delivery and real-world iteration"}
+          row1={<p><b>Work:</b> Website & software demos, prototypes, UI builds</p>}
+          row2={<p><b>Strengths:</b> Clear scope, fast iteration, clean handover</p>}
+          row3={<p><b>Community:</b> Creator ecosystem experience + user feedback loops</p>}
         />
 
-        <InfoCard
-        title={"Framworks / Libraries / Plugins"}
-        subtitle={"My experience with frameworks, libraries and plugins"}
-        row1={<p><b>Frameworks:</b> Tailwind.CSS</p>}
-        row2={<p><b>Libraries:</b> React <b>:</b> Zustand <b>:</b> React DOM <b>:</b> React-Router-Dom <b>:</b> Lucide </p>}
-        row3={<p><b>Plugins:</b> DaisyUI</p>}
-        />
-  
-        <InfoCard
-        title={"Software"}
-        subtitle={"Software im experienced in using"}
-        row1={<p>Intellij Idea <b>:</b> Firebase Studio <b>:</b> Github <b>:</b> Figma <b>:</b> Godot <b>:</b> Visual Studio <b>:</b> Firebase hosting <b>:</b> MongoDB <b>:</b> Asprite</p>}
-        />
-
-        <InfoCard
-        title={"Skills"}
-        subtitle={"My skills and interests"}
-        row1={<p><b>Development:</b> Ive created multiple fullstack web applications and refine my skills in creation every day</p>}
-        row2={<p><b>Modding:</b> Im a Java minecraft modder, which tought me how to properly develop manage and plan large projects</p>}
-        row3={<p><b>Design:</b> Desining all my own assets and graphics on Figma, ive learned key graphic design principles and refine my abilites constantly</p>}
-        
-        />
         
       </div>
       </div>
