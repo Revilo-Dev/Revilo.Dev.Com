@@ -25,7 +25,9 @@ function Home() {
         <div className="col-span-2">
           <h2 className="text-primary font-bold mb-4">Whats New?</h2>
           <div className="flex flex-col gap-4">
-            <LinkCard title="ReviloDev.com V3.1" subtitle={"15/10/25"} to="https://github.com/Revilo-Dev" />
+            <LinkCard title="ReviloDev.com V3.3" subtitle={"22/2/26"} to="https://github.com/Revilo-Dev/Revilo.Dev.Com/commits/main/" />
+           <LinkCard title="ReviloDev.com V3.2" subtitle={"11/17/25"} to="https://github.com/Revilo-Dev/Revilo.Dev.Com/commits/main/" />
+            <LinkCard title="ReviloDev.com V3.1" subtitle={"15/10/25"} to="https://github.com/Revilo-Dev/Revilo.Dev.Com/commits/main/" />
             <LinkCard title="Boundless Mod released" subtitle={"23/9/25"} to="https://www.curseforge.com/minecraft/mc-mods/boundless-quests" />
             <LinkCard title="RUNIC Mod released" subtitle={"30/8/25"} to="https://www.curseforge.com/minecraft/mc-mods/runic-enhancements" />
           </div>

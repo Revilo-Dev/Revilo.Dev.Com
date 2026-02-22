@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HeaderCard from '../components/HeaderCard';
-import InfoCard from '../components/InfoCard';
+import ItemInfoCard from '../components/ItemInfoCard';
 import TagSelector from '../components/TagSelector';
 
 
@@ -23,7 +23,10 @@ const allProjects = [
     subtitle: "Open-source code library for reuse across projects",
     img: "/assets/Lib.png",
     description: "",
-    rows: [{ content: <p><b>Published:</b> Mar 29, 2025</p> }],
+    rows: [
+      { content: <p><b>Published:</b> Mar 29, 2025</p> },
+      { content: <p><b>Last updated:</b> May 25, 2025</p> },
+    ],
     linkUrl: "https://github.com/revilo-dev/revilodevcom",
     linkname: "Visit",
     tag: "Websites",
@@ -35,9 +38,9 @@ const allProjects = [
     description: "",
     rows: [
       { content: <p><b>Published:</b> Apr 06, 2025</p> },
-      { content: <p><b>Last updated:</b> Apr 06, 2025</p> },
+      { content: <p><b>Last updated:</b> Apr 08, 2025</p> },
     ],
-    linkUrl: "https://github.com/revilo-dev/revilodevcom",
+    linkUrl: "https://itch-webgames.web.app/",
     linkname: "Visit",
     tag: "Websites",
   },
@@ -66,6 +69,19 @@ const allProjects = [
     linkUrl: "https://weatherdashboard-rd.web.app/",
     linkname: "Visit",
     tag: "Websites",
+  },
+  {
+    title: "Twilight Zone",
+    subtitle: "My first published game",
+    img: "/assets/Twilight.png",
+    description: "",
+    rows: [
+      { content: <p><b>Published:</b> Dec 13, 2024</p> },
+      { content: <p><b>Last updated:</b> Dec 13, 2024</p> },
+    ],
+    linkUrl: "https://revilodev.itch.io/twilightzone",
+    linkname: "Visit",
+    tag: "Games",
   },
   {
     title: "RUNIC",
@@ -168,21 +184,7 @@ const allProjects = [
     linkname: "Visit",
     tag: "Modding",
   },
-  {
-    title: "Twilight Zone",
-    subtitle: "My first published game",
-    img: "/assets/Twilight.png",
-    description: "",
-    rows: [
-      { content: <p><b>Published:</b> Dec 13, 2024</p> },
-      { content: <p><b>Last updated:</b> Dec 13, 2024</p> },
-    ],
-    linkUrl: "https://revilodev.itch.io/twilightzone",
-    linkname: "Visit",
-    tag: "Games",
-  },
-
-  {
+  /*{
     title: "Nothing here... yet",
     subtitle: "",
     img: '/assets/revilo.png',
@@ -190,28 +192,12 @@ const allProjects = [
     linkUrl: 'https://github.com/Revilo-Dev',
     linkname: 'Visit', 
     tag: 'Software',
-  },
+  },*/
 
 ];
 
-  {/* template
-  {
-    title: "",
-    subtitle: "",
-    img: '/assets/revilo.png',
-    description: '',
-    rows: [
-      { content: <p><b>Published:</b> </p> },
-      { content: <p><b>Updated:</b> </p> },
-    ],
-    linkUrl: '',
-    linkname: 'Visit', 
-    tag: 'Websites',
-  },
-  */}
-
 function Projects() {
-  const tags = ['Websites', 'Modding', 'Software', 'Games']; // Define tags
+  const tags = ['Websites', 'Modding', /*'Software',*/ 'Games']; // tags
 
   const [selectedTag, setSelectedTag] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState(allProjects);
@@ -233,23 +219,20 @@ function Projects() {
       <HeaderCard />
       <br />
       <div className="flex justify-center w-1/1 A-SlideDownBounce"><TagSelector className='justify-center' tags={tags} onTagSelect={handleTagSelect} /></div>
-      <div className="content A-SlideUpBounce">
+      <div className="content A-SlideUpBounce grid  md:grid-cols-3 gap-6">
 
-        <br />
-
-        {/* Render InfoCards based on filteredProjects */}
         {filteredProjects.map((project, index) => (
-          <InfoCard
+          <ItemInfoCard
             key={index}
             title={project.title}
             subtitle={project.subtitle}
             row1={project.rows && project.rows[0] ? project.rows[0].content : null}
             row2={project.rows && project.rows[1] ? project.rows[1].content : null}
             row3={project.rows && project.rows[2] ? project.rows[2].content : null}
-            img={project.img} // Use img prop
+            img={project.img}
             description={project.description}
-            linkUrl={project.linkUrl} // Use linkUrl prop
-            linkname={project.linkname} // Use linkname prop
+            linkUrl={project.linkUrl} 
+            linkname={project.linkname} 
           />
         ))}
 

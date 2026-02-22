@@ -10,7 +10,13 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 const HeaderCard = () => {
   return (
     <div className='bg-base-300 w-12/13 rounded-lg min-h-55 p-6 mt-16 flex flex-col md:flex-row items-center md:items-start shadow-lg z-10 max-[420px]:p-4 max-[420px]:mt-12'>
-      <img className='AH-Pulse rounded-3xl w-40 h-40 md:w-75 md:h-75 object-cover mb-6 md:mb-0 md:mr-8 border-4 border-primary mx-auto md:mx-0 self-center max-[420px]:w-32 max-[420px]:h-32' src="/assets/revilo.png" alt="Revilo.Dev Icon" />
+      <div className='w-40 h-40 md:w-75 md:h-75 max-[420px]:w-32 max-[420px]:h-32 rounded-3xl border-4 border-primary mb-6 md:mb-0 md:mr-8 mx-auto md:mx-0 self-center flex-shrink-0 AH-Pulse'>
+        <img
+          className='w-full h-full object-cover rounded-2xl'
+          src="/assets/revilo.png"
+          alt="Revilo.Dev Icon"
+        />
+      </div>
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
         <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>Revilo.Dev</h1></a>
         <p className='text-sm text-zinc-400 m-1 p-0 max-[420px]:text-xs'>A creator with a passion for programming, modding, and design.</p>
