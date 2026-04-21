@@ -14,6 +14,7 @@ import AboutRunic from './pages/modding/runic/aboutrunic.jsx';
 import AboutBoundless from './pages/modding/boundless/aboutboundless.jsx';
 import RunicWiki from './pages/modding/runic/runicwiki.jsx';
 import BoundlessWiki from './pages/modding/boundless/boundlesswiki.jsx';
+import UnderDevelopment from './pages/UnderDevelopment.jsx';
 
 
 
@@ -63,6 +64,7 @@ function App() {
           <Route path="/Modding" element={<Modding />} />
           <Route path="/Links" element={<Links />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/Under-Development" element={<UnderDevelopment />} />
           <Route path="/About-Runic" element={<AboutRunic />} />
           <Route path="/About-Boundless" element={<AboutBoundless />} />
           <Route path="/Runic-Wiki" element={<RunicWiki />} />

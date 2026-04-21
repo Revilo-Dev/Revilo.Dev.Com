@@ -7,8 +7,8 @@ function ThemeDropdown() {
   const { setTheme } = useThemeStore();
 
   const themeList = [
-    "light", "dark", "business", "corporate", "lofi", "wireframe", "black", "luxury",
-    "coffee",
+    "light", "dark", "coffee", "caramellatte", "business", "corporate", "lofi",  "black", "nord", "luxury",
+     "dim", "sunset",
   ];
 
   return (
