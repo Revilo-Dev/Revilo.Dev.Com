@@ -6,10 +6,10 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Projects from './pages/Projects.jsx';
 import Modding from './pages/Modding.jsx';
-import Links from './pages/Links.jsx';
+import Links from './pages/Gallery.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import Footer from './components/Footer';
-import { Home as HomeIcon, Info, Folder, Hammer, Link as LinkIcon } from 'lucide-react';
+import { Home as HomeIcon, Info, Folder, Hammer, Link as LinkIcon, Images } from 'lucide-react';
 import AboutRunic from './pages/modding/runic/aboutrunic.jsx';
 import AboutBoundless from './pages/modding/boundless/aboutboundless.jsx';
 import RunicWiki from './pages/modding/runic/runicwiki.jsx';
@@ -46,9 +46,9 @@ function App() {
               <Hammer className="icon" />
               <span className="label">Modding</span>
             </Link>
-            <Link className="btn btn-soft AH-Underline" to="/Links">
-              <LinkIcon className="icon" />
-              <span className="label">Links</span>
+            <Link className="btn btn-soft AH-Underline" to="/Gallery">
+              <Images className="icon" />
+              <span className="label">Gallery</span>
             </Link>
           </div>
         </nav>
@@ -62,14 +62,14 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Modding" element={<Modding />} />
-          <Route path="/Links" element={<Links />} />
+          <Route path="/Gallery" element={<Links />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="/Under-Development" element={<UnderDevelopment />} />
           <Route path="/About-Runic" element={<AboutRunic />} />
           <Route path="/About-Boundless" element={<AboutBoundless />} />
           <Route path="/Runic-Wiki" element={<RunicWiki />} />
           <Route path="/Boundless-Wiki" element={<BoundlessWiki />} />
-          <Route path="/Links" element={<Links />} />
+          <Route path="/Gallery" element={<Links />} />
         </Routes>
 
 

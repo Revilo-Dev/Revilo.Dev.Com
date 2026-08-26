@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderCard from '../components/HeaderCard';
 import LinkCard from '../components/LinkCard';
-import { User, Folder, Hammer, MoreHorizontal } from 'lucide-react';
+import { User, Folder, Hammer, MoreHorizontal, Image } from 'lucide-react';
 
 function Home() {
   return (
@@ -16,6 +16,7 @@ function Home() {
           <LinkCard icon={User} title="About Me" to="/about" />
           <LinkCard icon={Folder} title="Projects" to="/projects" />
           <LinkCard icon={Hammer} title="Modding" to="/modding" />
+          <LinkCard icon={Image} title="Gallery" to="/gallery" />
 
           <div className="hidden md:block w-full flex justify-center md:w-auto">
             <LinkCard icon={MoreHorizontal} title="More" to="/links" />
@@ -30,7 +31,6 @@ function Home() {
            <LinkCard title="ReviloDev.com V3.2" subtitle={"11/17/25"} to="https://github.com/Revilo-Dev/Revilo.Dev.Com/commits/main/" />
             <LinkCard title="ReviloDev.com V3.1" subtitle={"15/10/25"} to="https://github.com/Revilo-Dev/Revilo.Dev.Com/commits/main/" />
             <LinkCard title="Boundless Mod released" subtitle={"23/9/25"} to="https://www.curseforge.com/minecraft/mc-mods/boundless-quests" />
-            <LinkCard title="RUNIC Mod released" subtitle={"30/8/25"} to="https://www.curseforge.com/minecraft/mc-mods/runic-enhancements" />
           </div>
         </div>
 

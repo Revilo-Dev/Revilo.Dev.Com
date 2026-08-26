@@ -10,7 +10,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 const HeaderCard = () => {
   return (
     <div className='bg-base-300 w-12/13 rounded-lg min-h-55 p-6 mt-16 flex flex-col md:flex-row items-center md:items-start shadow-lg z-10 max-[420px]:p-4 max-[420px]:mt-12'>
-      <div className='w-40 h-40 md:w-75 md:h-75 max-[420px]:w-32 max-[420px]:h-32 rounded-3xl border-4 border-primary mb-6 md:mb-0 md:mr-8 mx-auto md:mx-0 self-center flex-shrink-0 AH-Pulse'>
+      <div className='w-40 h-40 md:w-75 md:h-75 max-[420px]:w-32 max-[420px]:h-32 rounded-3xl border-4 border-primary mb-6 md:mb-0 md:mr-8 mx-auto md:mx-0 self-center flex-shrink-0'>
         <img
           className='w-full h-full object-cover rounded-2xl'
           src="/assets/revilo.png"
@@ -19,8 +19,11 @@ const HeaderCard = () => {
       </div>
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
         <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>Revilo.Dev</h1></a>
-        <p className='text-sm text-zinc-400 m-1 p-0 max-[420px]:text-xs'>A creator with a passion for programming, modding, and design.</p>
-        <p className='mb-4 max-[420px]:text-sm max-[420px]:leading-snug'>I'm Revilo.Dev, A independent Polish programmer and creator, I have experience in web development, creating most of my projects in React. I have gained experienced in Java through Minecraft modding where I have amassing over 900K downloads through my projects, I'm also affiliated with kinetic hosting servers. I do graphic design and UX, gaining experience through creating my own UIs, UX and graphics for all of my projects, further refining my skills through creating UI redesign concepts. Ive Worked Multiple areas of Development such as Modding, Web Development and Game Development. I've done some freelance work, creating website / software demos and have experience in properly managing and maintaining projects.</p>
+
+        <p className='mb-4 max-[420px]:text-sm max-[420px]:leading-snug'>Hey there! I’m reviloDev, an independent Polish programmer and creator. I’m an experienced React web developer and aspiring software engineer, currently focused on developing Minecraft mods in Java.
+Across my projects, I’ve amassed over 1.2 million downloads, with some of my most prominent mods including Runic (140k+), Mythcraft (200k+), and Boundless (300k+). I’m also affiliated with Kinetic Hosting.
+I’m passionate about graphic and UX design, and I use Figma to design my apps, interfaces, assets, and graphics. I’ve worked across several areas of development, including Minecraft modding, web development, and game development.
+Outside of development, I’m interested in all things software and technology, particularly Apple, Samsung, operating systems, and the wider tech ecosystem.</p>
         <div className='flex items-center mb-4'>
           <FontAwesomeIcon icon={faLocationDot} className="mr-2"/> <span><b>Australia | QLD</b></span>
         </div>

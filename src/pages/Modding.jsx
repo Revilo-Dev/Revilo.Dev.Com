@@ -66,6 +66,27 @@ function Modding() {
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
             ]}
           />
+            <ItemCard
+            image="/assets/gatesavarice.png"
+            title="Utilized: Magnets and paxels"
+            links={[         
+              { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
+            ]}
+          />
+            <ItemCard
+            image="/assets/gatesavarice.png"
+            title="Arsenal: Weaponry"
+            links={[              
+              { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
+            ]}
+          />
+            <ItemCard
+            image="/assets/gatesavarice.png"
+            title="Re-Enforced: Metals"
+            links={[          
+              { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
+            ]}
+          />
         </div>
       </div>
     </div>
