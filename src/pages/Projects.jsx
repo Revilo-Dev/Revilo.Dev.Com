@@ -26,8 +26,8 @@ const allProjects = [
     rows: [
       { content: <p><b>Published:</b> Sep 9, 2026</p> },
     ],
-    privacyPolicyUrl: "/flow-privacy-policy",
-    privacyPolicyName: "Privacy Policy",
+    PolicyUrl: "/flow-privacy-policy",
+    PolicyName: "Privacy Policy",
     linkUrl: "https://play.google.com/store/apps/details?id=com.revilodev.flow",
     linkname: "Get",
     tag: "Apps",
@@ -295,8 +295,8 @@ function Projects() {
             row3={project.rows && project.rows[2] ? project.rows[2].content : null}
             img={project.img}
             description={project.description}
-            policyLinkUrl={project.privacyPolicyUrl}
-            policyLinkName={project.privacyPolicyName}
+            policyLinkUrl={project.PolicyUrl}
+            policyLinkName={project.PolicyName}
             linkUrl={project.linkUrl} 
             linkname={project.linkname} 
           />

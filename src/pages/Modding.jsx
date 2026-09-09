@@ -58,7 +58,7 @@ function Modding() {
             ]}
           />
           <ItemCard
-            image="/assets/gatesavarice.png"
+            image="/assets/avarice.png"
             title="Gateways to Avarice"
             links={[
               { label: 'About', to: '/Under-Development', icon: Info },
@@ -67,14 +67,14 @@ function Modding() {
             ]}
           />
             <ItemCard
-            image="/assets/gatesavarice.png"
+            image="/assets/utilized-icon.png"
             title="Utilized: Magnets and paxels"
             links={[         
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },
             ]}
           />
             <ItemCard
-            image="/assets/gatesavarice.png"
+            image="/assets/arsenal.png"
             title="Arsenal: Weaponry"
             links={[              
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/boundless-quests', icon: LinkIcon },

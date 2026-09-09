@@ -18,7 +18,7 @@ const HeaderCard = () => {
         />
       </div>
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
-        <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>Revilo.Dev</h1></a>
+        <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>ReviloDev</h1></a>
 
         <p className='mb-4 max-[420px]:text-sm max-[420px]:leading-snug'>Hey there! I’m reviloDev, an independent Polish programmer and creator. I’m an experienced React web developer and aspiring software engineer, currently focused on developing Minecraft mods in Java.
 Across my projects, I’ve amassed over 1.2 million downloads, with some of my most prominent mods including Runic (140k+), Mythcraft (200k+), and Boundless (300k+). I’m also affiliated with Kinetic Hosting.
