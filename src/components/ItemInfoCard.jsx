@@ -1,7 +1,8 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const ItemInfoCard = ({ img, title, row1, row2, linkUrl, linkname }) => {
+const ItemInfoCard = ({ img, title, row1, row2, linkUrl, linkname, policyLinkUrl, policyLinkName }) => {
   return (
     <div className="bg-base-300 rounded-xl shadow-lg p-4 flex flex-col items-center AH-Expand transition w-full">
       <div className="w-full flex flex-col items-center">
@@ -21,6 +22,18 @@ const ItemInfoCard = ({ img, title, row1, row2, linkUrl, linkname }) => {
             {linkname}
             <ExternalLink className="ml-1 w-5 h-5" />
           </a>
+          {policyLinkUrl && (
+            policyLinkUrl.startsWith('/') ? (
+              <Link to={policyLinkUrl} className="btn btn-secondary btn-sm ransparentUI mt-3 w-10/10 p-2 rounded-sm AH-Pulse">
+                {policyLinkName || 'Privacy Policy'}
+              </Link>
+            ) : (
+              <a href={policyLinkUrl} className="btn btn-secondary btn-sm ransparentUI mt-3 w-10/10 p-2 rounded-sm AH-Pulse" target="_blank" rel="noopener noreferrer">
+                {policyLinkName || 'Privacy Policy'}
+                <ExternalLink className="ml-1 w-5 h-5" />
+              </a>
+            )
+          )}
 
 
 

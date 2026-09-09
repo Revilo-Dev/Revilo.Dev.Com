@@ -18,6 +18,20 @@ const allProjects = [
     linkname: "Visit",
     tag: "Websites",
   },
+    {
+    title: "Flow - Habits and Streaks",
+    subtitle: "Android OneUI habit tracker",
+    img: "/assets/flow-icon.png",
+    description: "",
+    rows: [
+      { content: <p><b>Published:</b> Sep 9, 2026</p> },
+    ],
+    privacyPolicyUrl: "/flow-privacy-policy",
+    privacyPolicyName: "Privacy Policy",
+    linkUrl: "https://play.google.com/store/apps/details?id=com.revilodev.flow",
+    linkname: "Get",
+    tag: "Apps",
+  },
   {
     title: "ReviloLib",
     subtitle: "Open-source code library for reuse across projects",
@@ -247,7 +261,7 @@ const allProjects = [
 ];
 
 function Projects() {
-  const tags = ['Websites', 'Modding', /*'Software',*/ 'Games']; // tags
+  const tags = ['Websites', 'Apps', 'Modding', 'Games']; // tags
 
   const [selectedTag, setSelectedTag] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState(allProjects);
@@ -281,6 +295,8 @@ function Projects() {
             row3={project.rows && project.rows[2] ? project.rows[2].content : null}
             img={project.img}
             description={project.description}
+            policyLinkUrl={project.privacyPolicyUrl}
+            policyLinkName={project.privacyPolicyName}
             linkUrl={project.linkUrl} 
             linkname={project.linkname} 
           />

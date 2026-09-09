@@ -8,6 +8,10 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [react(), tailwindcss(),
   ],
+  server: {
+    host: '127.0.0.1',
+    port: 5173,
+  },
   build: {
     assetsDir: 'assets', // This tells Vite to put assets in a folder named 'assets' inside the output directory
     publicDir: 'src/assets', // Treat src/assets as public assets and copy them to the root of the output directory

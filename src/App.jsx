@@ -15,6 +15,7 @@ import AboutBoundless from './pages/modding/boundless/aboutboundless.jsx';
 import RunicWiki from './pages/modding/runic/runicwiki.jsx';
 import BoundlessWiki from './pages/modding/boundless/boundlesswiki.jsx';
 import UnderDevelopment from './pages/UnderDevelopment.jsx';
+import FlowPrivacyPolicy from './pages/FlowPrivacyPolicy.jsx';
 
 
 
@@ -61,6 +62,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/flow-privacy-policy" element={<FlowPrivacyPolicy />} />
           <Route path="/Modding" element={<Modding />} />
           <Route path="/Gallery" element={<Links />} />
           <Route path="*" element={<NoMatch />} />
