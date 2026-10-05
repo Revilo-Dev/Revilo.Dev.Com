@@ -35,7 +35,7 @@ function Modding() {
             title="Runic: Enchantments"
             links={[
               { label: 'About', to: '/Under-Development', icon: Info },
-              { label: 'Wiki', to: '/Under-Development', icon: BookOpen },
+              { label: 'Wiki', to: '/projects/runic/wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/runic-enhancements', icon: LinkIcon },
             ]}
           />
@@ -53,7 +53,7 @@ function Modding() {
             title="Aura: Skills & Abilities"
             links={[
               { label: 'About', to: '/Under-Development', icon: Info },
-              { label: 'Wiki', to: '/Under-Development', icon: BookOpen },              
+              { label: 'Wiki', to: '/projects/aura/wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/codex-skills-abilities', icon: LinkIcon },
             ]}
           />

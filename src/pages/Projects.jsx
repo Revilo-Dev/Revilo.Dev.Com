@@ -134,6 +134,8 @@ const allProjects = [
     rows: [{ content: <p><b>Published:</b> Aug 30, 2025</p> }],
     linkUrl: "https://www.curseforge.com/minecraft/mc-mods/runic-enhancements",
     linkname: "Visit",
+    PolicyUrl: "/projects/runic/wiki",
+    PolicyName: "Wiki",
     tag: "Modding",
   },
   {
@@ -154,6 +156,8 @@ const allProjects = [
     rows: [{ content: <p><b>Published:</b> Nov 24, 2025</p> }],
     linkUrl: "https://www.curseforge.com/minecraft/mc-mods/codex-skills",
     linkname: "Visit",
+    PolicyUrl: "/projects/aura/wiki",
+    PolicyName: "Wiki",
     tag: "Modding",
   },
   {
