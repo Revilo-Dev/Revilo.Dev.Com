@@ -18,14 +18,14 @@ const HeaderCard = () => {
         />
       </div>
       <div className='flex flex-col items-center md:items-start text-center md:text-left'>
-        <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-bold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>ReviloDev</h1></a>
+        <a href='https://github.com/Revilo-Dev/Revilo.Dev.com'><h1 className='text-4xl font-extrabold mb-1 text-primary AH-Underline max-[420px]:text-3xl'>ReviloDev</h1></a>
 
         <p className='mb-4 max-[420px]:text-sm max-[420px]:leading-snug'>Hey there! I’m ReviloDev, an independent Polish programmer and creator. I’m an experienced React web developer and aspiring software engineer, currently focused on developing Minecraft mods in Java.
 Across my projects, I’ve amassed over 1.2 million downloads, with some of my most prominent mods including Runic (140k+), Mythcraft (200k+), and Boundless (360k+). I’m also affiliated with Kinetic Hosting.
 I’m passionate about graphic and UX design, and I use Figma to design my apps, interfaces, assets, and graphics. I’ve worked across several areas of development, including Minecraft modding, web development, and game development.
 Outside of development, I’m interested in all things software and technology, particularly Apple, Samsung, operating systems, and the wider tech ecosystem.</p>
         <div className='flex items-center mb-4'>
-          <FontAwesomeIcon icon={faLocationDot} className="mr-2"/> <span><b>Australia | QLD</b></span>
+          <FontAwesomeIcon icon={faLocationDot} className="mr-2"/> <span className="font-extrabold text-primary">Australia | QLD</span>
         </div>
         <div className='flex space-x-4 mb-4'>
           <a href="https://github.com/Revilo-Dev" className="text-zinc-500 hover:text-primary btn btn-soft AH-Glow" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>

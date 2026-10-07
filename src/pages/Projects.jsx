@@ -46,6 +46,18 @@ const allProjects = [
     linkname: "Get",
     tag: "Apps",
   },
+        {
+    title: "OneUI ToolKit",
+    subtitle: "Fork of OneUI design repo updated for OneUI 9.0",
+    img: "/assets/toolkit.png",
+    description: "",
+    rows: [
+      { content: <p><b>Published:</b> Oct 1, 2026</p> },
+    ],
+    linkUrl: "https://github.com/Revilo-Dev/oneui-design-9.0",
+    linkname: "Fork",
+    tag: "Apps",
+  },
   
   {
     title: "ReviloLib",

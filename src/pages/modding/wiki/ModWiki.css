@@ -42,6 +42,8 @@
 .wiki-article h2 { font-size: 1.55rem; font-weight: 800; color: var(--color-primary); margin: 34px 0 12px; scroll-margin-top: 20px; }
 .wiki-article h3 { font-size: 1.2rem; font-weight: 750; margin: 25px 0 10px; scroll-margin-top: 20px; }
 .wiki-article p { margin: 0 0 16px; }
+.wiki-video { display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #000; }
+.wiki-video iframe { display: block; width: 100%; height: 100%; border: 0; }
 .wiki-article ul, .wiki-article ol { padding-left: 1.5rem; margin: 0 0 18px; }
 .wiki-article ul { list-style: disc; }
 .wiki-article ol { list-style: decimal; }
@@ -66,10 +68,6 @@
 .wiki-related strong, .wiki-related svg { color: var(--color-primary); }
 .wiki-related small { opacity: .7; font-size: .77rem; line-height: 1.35; margin-top: 4px; }
 .wiki-related svg { flex-shrink: 0; }
-.wiki-pagination { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; }
-.wiki-pagination a { display: flex; align-items: center; gap: 9px; padding: 11px; color: var(--color-primary); font-weight: 700; }
-.wiki-pagination a:last-child { text-align: right; }
-.wiki-pagination small { display: block; color: var(--color-base-content); opacity: .65; font-size: .72rem; font-weight: 500; }
 .mod-wiki-missing { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 @media (max-width: 850px) { .wiki-layout { grid-template-columns: 1fr; } .wiki-sidebar { position: static; max-height: none; } .wiki-sidebar-group { display: inline-block; vertical-align: top; min-width: min(220px, 100%); } }
-@media (max-width: 580px) { .mod-wiki { padding-top: 30px; width: 92vw; } .wiki-hero { align-items: flex-start; gap: 15px; padding: 18px; } .wiki-hero img { width: 64px; height: 64px; border-radius: 12px; } .wiki-hero h1 { font-size: 1.9rem; } .wiki-hero p:last-child { font-size: .86rem; } .wiki-article table { min-width: 500px; } .wiki-pagination a { font-size: .8rem; } }
+@media (max-width: 580px) { .mod-wiki { padding-top: 30px; width: 92vw; } .wiki-hero { align-items: flex-start; gap: 15px; padding: 18px; } .wiki-hero img { width: 64px; height: 64px; border-radius: 12px; } .wiki-hero h1 { font-size: 1.9rem; } .wiki-hero p:last-child { font-size: .86rem; } .wiki-article table { min-width: 500px; } }

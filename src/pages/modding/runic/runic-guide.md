@@ -1,6 +1,8 @@
 # Getting Started
 
-RUNIC gear is built by adding enhancements to equipment. Enhancements can be stat boosts, enchant-like effects, synergies, mythic powers, or relic powers.
+Enchant Gear in RUNIC by applying enchants, with various stat and effect bonuses, Upgrade gear with inscriptions, manage corruption and overpower your gear with mythics, synergies and relics.
+
+[Watch the RUNIC guide](https://www.youtube.com/watch?v=tCR0U-hLL94)
 
 ## Main Blocks
 

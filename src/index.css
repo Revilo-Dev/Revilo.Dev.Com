@@ -37,9 +37,10 @@ nav {
 
 .NavBar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: min(90vw, 600px);
+  gap: 10px;
+  width: min(calc(100vw - 24px), 680px);
   padding: 10px 16px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.568);

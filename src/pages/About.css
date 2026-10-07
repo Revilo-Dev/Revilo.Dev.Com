@@ -1,0 +1,33 @@
+.about-page { width: min(1200px, 92vw); margin: 0 auto; padding: 30px 0 130px; text-align: left; }
+.about-achievements { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0 0 54px; }
+.about-achievements > div { display: flex; flex-direction: column; gap: 6px; min-height: 125px; padding: 22px 24px; border-radius: 16px; background: var(--color-base-300); border: 1px solid color-mix(in srgb, currentColor 9%, transparent); }
+.about-achievements strong { color: var(--color-primary); font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1; letter-spacing: -.04em; }
+.about-achievements span { max-width: 240px; line-height: 1.4; font-size: .88rem; opacity: .76; }
+.about-section-heading { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+.about-section-heading h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -.035em; }
+.about-section-heading > a { display: inline-flex; align-items: center; gap: 7px; color: var(--color-primary); font-weight: 700; }
+.about-section-heading > a:hover { text-decoration: underline; }
+.about-work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.about-work-card { display: flex; flex-direction: column; min-width: 0; padding: 25px; border-radius: 19px; border: 1px solid color-mix(in srgb, currentColor 9%, transparent); box-shadow: 0 8px 24px #0001; }
+.about-work-icon { display: grid; place-items: center; flex: none; width: 48px; height: 48px; color: var(--color-primary); background: var(--color-base-200); border-radius: 13px; }
+.about-work-card h3 { font-size: 1.4rem; font-weight: 800; margin: 18px 0 8px; }
+.about-work-card > p { line-height: 1.6; opacity: .77; margin-bottom: 26px; }
+.about-project-links { display: grid; gap: 8px; margin-top: auto; }
+.about-project-links a { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 11px 12px; border-radius: 10px; background: var(--color-base-200); transition: background .18s, transform .18s; }
+.about-project-links a:hover { background: color-mix(in srgb, var(--color-primary) 15%, var(--color-base-200)); transform: translateX(2px); }
+.about-project-links a > span { min-width: 0; }
+.about-project-links strong, .about-project-links small { display: block; }
+.about-project-links strong { color: var(--color-primary); font-size: .92rem; }
+.about-project-links small { opacity: .67; font-size: .76rem; margin-top: 2px; }
+.about-project-links svg { flex: none; color: var(--color-primary); }
+.about-software { margin-top: 54px; }
+.about-software-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.about-software-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; padding: 20px 22px; border: 1px solid color-mix(in srgb, currentColor 9%, transparent); border-radius: 15px; transition: border-color .18s, transform .18s; }
+.about-software-card:hover { border-color: var(--color-primary); transform: translateY(-2px); }
+.about-software-card > span { display: flex; flex-direction: column; min-width: 0; }
+.about-software-card strong { color: var(--color-primary); font-size: 1.02rem; }
+.about-software-card small { opacity: .7; margin-top: 3px; font-size: .8rem; }
+.about-software-card svg { flex: none; color: var(--color-primary); }
+@media (max-width: 900px) { .about-work-grid, .about-software-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 680px) { .about-achievements { grid-template-columns: 1fr 1fr; margin-bottom: 42px; } .about-achievements > div:last-child { grid-column: 1 / -1; } .about-work-grid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .about-achievements, .about-software-grid { grid-template-columns: 1fr; } .about-achievements > div:last-child { grid-column: auto; } }
