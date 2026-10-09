@@ -31,7 +31,7 @@ function WikiArticle({ page, resolveLink }) {
   </div>;
 }
 
-function ModWiki({ name, image, base, groups, pages, pageBySlug, resolveLink, heroDescription, introTitle, introDescription, sourceNote }) {
+function ModWiki({ name, image, base, groups, pages, pageBySlug, resolveLink, heroDescription, introTitle, introDescription, sourceNote, startPageSlug = 'getting-started' }) {
   const { slug } = useParams();
   const location = useLocation();
   const page = slug ? pageBySlug[slug] : null;
@@ -91,7 +91,7 @@ function ModWiki({ name, image, base, groups, pages, pageBySlug, resolveLink, he
           </article>
           <section className="wiki-related bg-base-300" aria-label="Related pages"><h2>Related pages</h2><div>{page.related.map((relatedSlug) => { const related = pageBySlug[relatedSlug]; return <Link key={relatedSlug} to={`${base}/${relatedSlug}`}><span><strong>{related.title}</strong><small>{related.summary}</small></span><ArrowRight size={18} /></Link>; })}</div></section>
         </> : <>
-          <section className="wiki-intro bg-base-300"><p className="wiki-eyebrow">START HERE</p><h2>{introTitle}</h2><p>{introDescription}</p>{sourceNote && <p className="wiki-source-note">{sourceNote}</p>}<Link className="btn btn-primary" to={`${base}/getting-started`}>Read Getting Started <ArrowRight size={17} /></Link></section>
+          <section className="wiki-intro bg-base-300"><p className="wiki-eyebrow">START HERE</p><h2>{introTitle}</h2><p>{introDescription}</p>{sourceNote && <p className="wiki-source-note">{sourceNote}</p>}<Link className="btn btn-primary" to={`${base}/${startPageSlug}`}>Read Getting Started <ArrowRight size={17} /></Link></section>
           {groups.map((group) => <section className="wiki-section" key={group}><h2>{group}</h2><div className="wiki-card-grid">{pages.filter((item) => item.group === group).map((item) => <Link className="wiki-topic-card bg-base-300" key={item.slug} to={`${base}/${item.slug}`}><span className="wiki-topic-icon"><BookOpen size={19} /></span><strong>{item.title}</strong><p>{item.summary}</p><span className="wiki-card-action">Read page <ArrowRight size={16} /></span></Link>)}</div></section>)}
         </>}
       </div>

@@ -5,8 +5,9 @@ import './GitHubActivity.css';
 const USERNAME = 'Revilo-Dev';
 const PROFILE_URL = `https://github.com/${USERNAME}`;
 const API_URL = 'https://api.github.com';
-const REFRESH_INTERVAL = 15 * 60 * 1000;
+const REFRESH_INTERVAL = 60 * 60 * 1000;
 let cachedData;
+let pendingRequest;
 
 async function getJson(url) {
   const response = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
@@ -36,7 +37,13 @@ function describeEvent(event) {
 
 async function loadGitHubData() {
   if (cachedData && Date.now() - cachedData.fetchedAt < REFRESH_INTERVAL) return cachedData;
+  if (pendingRequest) return pendingRequest;
 
+  pendingRequest = fetchGitHubData().finally(() => { pendingRequest = undefined; });
+  return pendingRequest;
+}
+
+async function fetchGitHubData() {
   const [profile, events] = await Promise.all([
     getJson(`${API_URL}/users/${USERNAME}`),
     getJson(`${API_URL}/users/${USERNAME}/events/public?per_page=30`),
@@ -63,6 +70,7 @@ async function loadGitHubData() {
 }
 
 const formatDate = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(value));
+const formatUpdateTime = (value) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }).format(new Date(value));
 
 function GitHubActivity() {
   const [data, setData] = useState(cachedData);
@@ -80,7 +88,18 @@ function GitHubActivity() {
 
   useEffect(() => {
     const timer = setInterval(() => setRefreshKey((key) => key + 1), REFRESH_INTERVAL);
-    return () => clearInterval(timer);
+    const refreshIfStale = () => {
+      if (document.visibilityState === 'visible' && (!cachedData || Date.now() - cachedData.fetchedAt >= REFRESH_INTERVAL)) {
+        setRefreshKey((key) => key + 1);
+      }
+    };
+    document.addEventListener('visibilitychange', refreshIfStale);
+    window.addEventListener('focus', refreshIfStale);
+    return () => {
+      clearInterval(timer);
+      document.removeEventListener('visibilitychange', refreshIfStale);
+      window.removeEventListener('focus', refreshIfStale);
+    };
   }, []);
 
   const refresh = () => {
@@ -118,7 +137,7 @@ function GitHubActivity() {
           </a>;
         }) : <p className="github-activity-empty">No recent public activity. <a href={PROFILE_URL} target="_blank" rel="noreferrer">View the GitHub profile</a>.</p>}
       </div>
-      <p className="github-activity-note">{error || `Updated ${formatDate(data.fetchedAt)} · Refreshes every 15 minutes`}</p>
+      <p className="github-activity-note">{error || `Updated ${formatUpdateTime(data.fetchedAt)} · Checks every hour`}</p>
     </> : loading ? <p className="github-activity-empty bg-base-300">Loading GitHub profile and activity…</p> : <p className="github-activity-empty bg-base-300">{error} <a href={PROFILE_URL} target="_blank" rel="noreferrer">View the GitHub profile</a>.</p>}
   </section>;
 }

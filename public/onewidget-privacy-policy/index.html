@@ -1,21 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy for OneWidget</title>
-    <style>
-      body { background: #18181b; color: #e4e4e7; font-family: system-ui, sans-serif; line-height: 1.6; margin: 0; padding: 2rem 1rem; }
-      main { background: #27272a; border-radius: 12px; box-shadow: 0 8px 24px #0006; margin: 2rem auto; max-width: 880px; padding: 2rem; }
-      h1, h2 { color: #a78bfa; line-height: 1.2; }
-      h1 { font-size: 2rem; } h2 { font-size: 1.4rem; margin-top: 2rem; }
-      a { color: #c4b5fd; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Privacy Policy for OneWidget</h1>
-      <p><strong>Effective date: 10 September 2026</strong></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneWidget Privacy Policy</title>
+  <style>
+    :root { font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; color-scheme: dark; background: #18181b; color: #e4e4e7; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; line-height: 1.7; }
+    a { color: #c4b5fd; text-underline-offset: 3px; }
+    a:hover { color: #a78bfa; }
+    .page { width: min(1440px, 94vw); margin: auto; padding: 48px 0 100px; }
+    .topline { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: .9rem; opacity: .8; }
+    .topline a { color: inherit; text-decoration: none; }
+    .hero, .sidebar, .panel { background: #27272a; border-radius: 18px; box-shadow: 0 6px 24px #0003; }
+    .hero { display: flex; align-items: center; gap: 28px; padding: 28px 34px; border: 1px solid #a78bfa66; }
+    .hero img { width: 112px; height: 112px; object-fit: contain; border: 2px solid #a78bfa; border-radius: 18px; background: #18181b; }
+    .eyebrow, .section-label { color: #a78bfa; font-size: .76rem; letter-spacing: .13em; font-weight: 800; text-transform: uppercase; }
+    .eyebrow { margin: 0 0 6px; }
+    h1 { color: #a78bfa; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.12; letter-spacing: -.04em; margin: 0 0 8px; }
+    .hero p:last-child { margin: 0; opacity: .8; }
+    .layout { display: grid; grid-template-columns: minmax(225px,270px) minmax(0,1fr); gap: 24px; margin-top: 24px; align-items: start; }
+    .sidebar { position: sticky; top: 22px; max-height: calc(100vh - 44px); overflow: auto; padding: 16px; }
+    .sidebar p { margin: 5px 11px 10px; }
+    .sidebar a { display: block; color: inherit; text-decoration: none; padding: 9px 11px; border-radius: 9px; font-size: .9rem; line-height: 1.25; }
+    .sidebar a:hover, .sidebar a:focus { color: #a78bfa; background: #18181b; }
+    .panel { min-width: 0; padding: clamp(20px,3vw,42px); }
+    .article-heading { border-bottom: 1px solid #ffffff2a; padding-bottom: 22px; margin-bottom: 24px; }
+    .article-heading h2 { font-size: clamp(1.8rem,3vw,2.7rem); margin: 5px 0; letter-spacing: -.03em; }
+    .article-heading p { opacity: .78; margin: 0; }
+    section { margin: 0 0 30px; scroll-margin-top: 24px; }
+    section:last-child { margin-bottom: 0; }
+    section h2 { color: #a78bfa; font-size: 1.55rem; line-height: 1.3; margin: 0 0 12px; }
+    p { margin: 0 0 16px; }
+    ul { padding-left: 1.5rem; margin: 10px 0 18px; }
+    li { margin: 4px 0; }
+    @media (max-width: 850px) { .layout { grid-template-columns: 1fr; } .sidebar { position: static; max-height: none; } }
+    @media (max-width: 580px) { .page { width: 92vw; padding-top: 30px; } .hero { padding: 18px; gap: 15px; align-items: flex-start; } .hero img { width: 64px; height: 64px; border-radius: 12px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline"><a href="/Projects">? Projects</a><span>?</span><span>OneWidget privacy policy</span></div>
+    <header class="hero"><img src="/assets/OneWidgets.png" alt="" /><div><p class="eyebrow">PROJECTS / PRIVACY</p><h1>OneWidget Privacy Policy</h1><p>How OneWidget handles widget information, permissions, and local storage.</p></div></header>
+    <div class="layout">
+      <nav class="sidebar" aria-label="Policy sections"><p class="section-label">On this page</p><a href="#about-onewidget">About OneWidget</a>
+<a href="#device-and-system-information">Device and System Information</a>
+<a href="#calendar-information">Calendar Information</a>
+<a href="#activity-and-step-information">Activity and Step Information</a>
+<a href="#media-information">Media Information</a>
+<a href="#weather-and-location">Weather and Location</a>
+<a href="#widget-settings">Widget Settings</a>
+<a href="#preview-images-and-sharing">Preview Images and Sharing</a>
+<a href="#external-applications-and-services">External Applications and Services</a>
+<a href="#advertising-and-analytics">Advertising and Analytics</a>
+<a href="#permissions">Permissions</a>
+<a href="#data-sharing">Data Sharing</a>
+<a href="#data-retention-and-deletion">Data Retention and Deletion</a>
+<a href="#security">Security</a>
+<a href="#developer-mode">Developer Mode</a>
+<a href="#children-s-privacy">Children's Privacy</a>
+<a href="#changes-to-this-privacy-policy">Changes to This Privacy Policy</a>
+<a href="#contact">Contact</a></nav>
+      <article class="panel"><div class="article-heading"><span class="section-label">PRIVACY POLICY</span><h2>OneWidget</h2><p>Effective date: 10 September 2026</p></div>
         <section>
           <p>This Privacy Policy explains how OneWidget ("the App") handles information when you use its Android applications, widgets, and related features.</p>
           <p>The App is developed by ReviloDev.</p>
@@ -23,15 +71,13 @@
           <p>Email: <a href="mailto:revilo2.dev@gmail.com">revilo2.dev@gmail.com</a></p>
           <p>Developer: ReviloDev</p>
         </section>
-        <section>
-          <h2>About OneWidget</h2>
+        <section id="about-onewidget"><h2>About OneWidget</h2>
           <p>OneWidget is an Android widget application that provides customisable home-screen and compatible lock-screen widgets.</p>
           <p>The App is designed to process most information locally on your device. We do not sell your personal information.</p>
           <p>Unless stated otherwise below, information used to display widgets is processed on your device and is not transmitted to the developer.</p>
           <p>The App currently does not require users to create an account.</p>
         </section>
-        <section>
-          <h2>Device and System Information</h2>
+        <section id="device-and-system-information"><h2>Device and System Information</h2>
           <p>The information accessed depends on which widgets and features you choose to use.</p>
           <p>Some widgets may access information provided by Android, including:</p>
           <ul>
@@ -45,8 +91,7 @@
           </ul>
           <p>This information is primarily processed locally to display the selected widget.</p>
         </section>
-        <section>
-          <h2>Calendar Information</h2>
+        <section id="calendar-information"><h2>Calendar Information</h2>
           <p>If you choose to use a calendar or upcoming-event widget, the App may request permission to access calendar information stored on your device.</p>
           <p>This may include:</p>
           <ul>
@@ -58,13 +103,11 @@
           <p>Calendar access is used only to provide calendar-related features.</p>
           <p>The App does not require calendar permission for widgets that do not use calendar information.</p>
         </section>
-        <section>
-          <h2>Activity and Step Information</h2>
+        <section id="activity-and-step-information"><h2>Activity and Step Information</h2>
           <p>If you use a step-counting or activity-related widget, the App may access activity or step information made available through Android, subject to the permissions required by your Android version.</p>
           <p>This information is used to display the requested activity information in the widget.</p>
         </section>
-        <section>
-          <h2>Media Information</h2>
+        <section id="media-information"><h2>Media Information</h2>
           <p>Media-related widgets may access information about media currently playing on your device where Android permits it.</p>
           <p>This may include:</p>
           <ul>
@@ -77,14 +120,12 @@
           <p>Some Android versions may require notification or media-session access for these features.</p>
           <p>The App uses this information to display and control media on your device.</p>
         </section>
-        <section>
-          <h2>Weather and Location</h2>
+        <section id="weather-and-location"><h2>Weather and Location</h2>
           <p>If a weather feature uses your location, the App may request location permission or allow you to provide a location manually.</p>
           <p>Location information is used only to obtain weather information for the location you select.</p>
           <p>If weather information is obtained from an external weather provider, a request may be transmitted to that provider. The provider may receive technical information normally associated with an internet request, such as your IP address.</p>
         </section>
-        <section>
-          <h2>Widget Settings</h2>
+        <section id="widget-settings"><h2>Widget Settings</h2>
           <p>The App stores settings required to configure your widgets.</p>
           <p>These may include:</p>
           <ul>
@@ -101,22 +142,19 @@
           <p>These settings are stored locally on your device using Android application storage.</p>
           <p>They are not used to create an advertising or marketing profile.</p>
         </section>
-        <section>
-          <h2>Preview Images and Sharing</h2>
+        <section id="preview-images-and-sharing"><h2>Preview Images and Sharing</h2>
           <p>The App may create widget preview images or snapshots so that widgets can be displayed accurately within the application.</p>
           <p>These preview files may be stored in the App&#39;s private local storage.</p>
           <p>Developer features may also allow a preview image to be exported using Android&#39;s secure file-sharing system.</p>
           <p>A file is only shared when you deliberately use an export or share function.</p>
         </section>
-        <section>
-          <h2>External Applications and Services</h2>
+        <section id="external-applications-and-services"><h2>External Applications and Services</h2>
           <p>The App may include widgets that open external applications or initiate searches using services such as web browsers, search providers, or video applications.</p>
           <p>When you select such a shortcut, you may leave OneWidget and interact directly with another application or service.</p>
           <p>Information you provide to that third-party application or service is governed by that provider&#39;s privacy policy.</p>
           <p>OneWidget does not control the privacy practices of external applications or websites.</p>
         </section>
-        <section>
-          <h2>Advertising and Analytics</h2>
+        <section id="advertising-and-analytics"><h2>Advertising and Analytics</h2>
           <p>The current version of OneWidget does not intentionally send the developer personal information for advertising, profiling, or analytics purposes.</p>
           <p>In particular, the App currently does not include:</p>
           <ul>
@@ -131,8 +169,7 @@
           <p>Google distinguishes data processed only on-device from data transmitted off the device when completing its Data Safety disclosures.</p>
           <p>If analytics, advertising, crash reporting, cloud synchronisation, or other external services are added in a future release, this Privacy Policy will be updated before those features are released.</p>
         </section>
-        <section>
-          <h2>Permissions</h2>
+        <section id="permissions"><h2>Permissions</h2>
           <p>The App only requests Android permissions required for features you choose to use.</p>
           <p>Depending on your device and selected widgets, these may include permission to access:</p>
           <ul>
@@ -147,8 +184,7 @@
           <p>You can review or revoke permissions through:</p>
           <p>Android Settings &rarr; Apps &rarr; OneWidget &rarr; Permissions</p>
         </section>
-        <section>
-          <h2>Data Sharing</h2>
+        <section id="data-sharing"><h2>Data Sharing</h2>
           <p>We do not sell personal information.</p>
           <p>We do not share locally processed widget information with advertisers.</p>
           <p>Information may leave your device only where required to provide a feature that communicates with an external service, or when you deliberately initiate an external action.</p>
@@ -162,8 +198,7 @@
           </ul>
           <p>Third-party services may process information according to their own privacy policies.</p>
         </section>
-        <section>
-          <h2>Data Retention and Deletion</h2>
+        <section id="data-retention-and-deletion"><h2>Data Retention and Deletion</h2>
           <p>Widget preferences and locally generated application data are stored on your device for as long as they are needed to provide the App&#39;s functionality.</p>
           <p>Depending on the feature, removing a widget may remove settings associated with that widget.</p>
           <p>You can remove locally stored application data by:</p>
@@ -174,15 +209,13 @@
           </ul>
           <p>Uninstalling the App generally removes its private application data from your device, subject to Android&#39;s normal backup and restore behaviour.</p>
         </section>
-        <section>
-          <h2>Security</h2>
+        <section id="security"><h2>Security</h2>
           <p>We use Android&#39;s application storage and permission systems to limit access to locally stored information.</p>
           <p>Files intended to remain private are stored in app-private storage.</p>
           <p>Where the App allows files to be shared, Android-compatible secure content-sharing mechanisms are used rather than exposing private filesystem paths.</p>
           <p>No method of electronic storage or communication can be guaranteed to be completely secure.</p>
         </section>
-        <section>
-          <h2>Developer Mode</h2>
+        <section id="developer-mode"><h2>Developer Mode</h2>
           <p>The App may contain a Developer Mode intended for application development, widget testing, layout editing, and preview generation.</p>
           <p>Developer Mode may store:</p>
           <ul>
@@ -195,25 +228,24 @@
           <p>This information is stored locally and is used for development and testing purposes.</p>
           <p>The Developer Mode access code is a convenience mechanism and is not intended to protect sensitive personal information.</p>
         </section>
-        <section>
-          <h2>Children&#39;s Privacy</h2>
+        <section id="children-s-privacy"><h2>Children&#39;s Privacy</h2>
           <p>OneWidget is not designed specifically to collect personal information from children.</p>
           <p>The App does not knowingly use children&#39;s information for advertising or profiling.</p>
           <p>If the App is distributed to children or included in Google&#39;s Families program, additional requirements may apply and this policy will be updated where necessary.</p>
         </section>
-        <section>
-          <h2>Changes to This Privacy Policy</h2>
+        <section id="changes-to-this-privacy-policy"><h2>Changes to This Privacy Policy</h2>
           <p>We may update this Privacy Policy when the App&#39;s features, permissions, data practices, or legal requirements change.</p>
           <p>The revised policy will display an updated effective date.</p>
           <p>Material changes affecting how user data is handled will be disclosed as required.</p>
         </section>
-        <section>
-          <h2>Contact</h2>
+        <section id="contact"><h2>Contact</h2>
           <p>For questions, requests, or concerns about this Privacy Policy or OneWidget&#39;s privacy practices, contact:</p>
           <p>Developer: ReviloDev</p>
           <p>Email: <a href="mailto:revilo2.dev@gmail.com">revilo2.dev@gmail.com</a></p>
           <p>Country: Australia</p>
         </section>
-    </main>
-  </body>
+    </article>
+    </div>
+  </main>
+</body>
 </html>

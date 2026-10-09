@@ -62,7 +62,7 @@ function Modding() {
             title="LevelUP: Leveling API"
             links={[
               { label: 'About', to: '/Under-Development', icon: Info },
-              { label: 'Wiki', to: '/Under-Development', icon: BookOpen },              
+              { label: 'Wiki', to: '/projects/levelup/wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/levelup-leveling-api', icon: LinkIcon },
             ]}
           />

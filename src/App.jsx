@@ -14,6 +14,7 @@ import AboutRunic from './pages/modding/runic/aboutrunic.jsx';
 import AboutBoundless from './pages/modding/boundless/aboutboundless.jsx';
 import RunicWiki from './pages/modding/runic/runicwiki.jsx';
 import AuraWiki from './pages/modding/aura/aurawiki.jsx';
+import LevelUpWiki from './pages/modding/levelup/levelupwiki.jsx';
 import BoundlessWiki from './pages/modding/boundless/boundlesswiki.jsx';
 import UnderDevelopment from './pages/UnderDevelopment.jsx';
 import FlowPrivacyPolicy from './pages/FlowPrivacyPolicy.jsx';
@@ -77,6 +78,8 @@ function App() {
           <Route path="/projects/runic/wiki/:slug" element={<RunicWiki />} />
           <Route path="/projects/aura/wiki" element={<AuraWiki />} />
           <Route path="/projects/aura/wiki/:slug" element={<AuraWiki />} />
+          <Route path="/projects/levelup/wiki" element={<LevelUpWiki />} />
+          <Route path="/projects/levelup/wiki/:slug" element={<LevelUpWiki />} />
           <Route path="/Boundless-Wiki" element={<BoundlessWiki />} />
           <Route path="/Gallery" element={<Links />} />
         </Routes>

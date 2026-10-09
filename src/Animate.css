@@ -295,18 +295,14 @@ ANIMATIONS - All animation classes
   }
 
 /* Glow ---------------------------------------------------------------*/
-  @keyframes hoverGlow {
-    from {
-      box-shadow: 0 0 0;
-    }
-    to {
-      box-shadow: 0 0 10px 5px; 
-    }
+  .AH-Glow {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.45s ease-out;
   }
 
-
-  .AH-Glow:hover {
-    animation: hoverGlow 0.5s ease-in-out forwards;
+  .AH-Glow:hover,
+  .AH-Glow:focus-visible {
+    box-shadow: 0 0 10px 5px color-mix(in srgb, var(--color-primary) 55%, transparent);
   }
 
 /* Text Glow ---------------------------------------------------------------*/
@@ -326,21 +322,49 @@ ANIMATIONS - All animation classes
 
 /* Underline ----------------------------------------------------------*/
 .AH-Underline {
-    position: relative; 
+    position: relative;
   }
   
   .AH-Underline::after {
     content: '';
     position: absolute;
     bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.35s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .AH-Underline:hover::after,
+  .AH-Underline:focus-visible::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .AH-Underline:is(.btn, button)::after {
     left: 0;
-    width: 0; 
-    height: 2px; 
-    background-color: var(--color-primary); 
-    transition: width 0.3s ease-in-out; 
+    width: 100%;
+    height: 7px;
+    background: none;
+    border: 2px solid var(--color-primary);
+    border-top: 0;
+    border-radius: 0 0 7px 7px;
+    transform: none;
+    clip-path: inset(0 50% 0 50%);
+    transition: clip-path 0.35s ease-in-out;
   }
-  
-  .AH-Underline:hover::after {
-    width: 100%; 
+
+  .AH-Underline:is(.btn, button):hover::after,
+  .AH-Underline:is(.btn, button):focus-visible::after {
+    transform: none;
+    clip-path: inset(0 0 0 0);
   }
-  
+
+  @media (prefers-reduced-motion: reduce) {
+    .AH-Glow,
+    .AH-Underline::after {
+      transition-duration: 0.01ms;
+    }
+  }
