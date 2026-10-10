@@ -34,6 +34,15 @@ const details = {
 };
 
 const slugify = (text) => text.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const elementalTitles = {
+  'fire-and-soulfire': 'Fire',
+  'ice-and-permafrost': 'Ice',
+  'lightning-and-plasma': 'Lightning',
+  'poison-and-toxin': 'Poison',
+  'force-and-singularity': 'Force',
+  'blood-and-bloodfire': 'Blood',
+  'wind-and-tempest': 'Wind',
+};
 const chapters = guide.slice(guide.indexOf('\n# Getting Started\n') + 1).trim().split(/\n(?=# )/);
 
 export const wikiPages = chapters.map((chapter) => {
@@ -41,7 +50,7 @@ export const wikiPages = chapters.map((chapter) => {
   const title = heading.replace(/^# /, '').trim();
   const slug = slugify(title);
   const content = body.join('\n').trim().replace(/\n---\s*$/, '').trim();
-  return { title, slug, content, ...details[slug] };
+  return { title: elementalTitles[slug] || title, slug, content, ...details[slug] };
 });
 
 export const wikiPageBySlug = Object.fromEntries(wikiPages.map((page) => [page.slug, page]));

@@ -420,6 +420,10 @@ Runs for at least 60 ticks and normally 100 scaled ticks. Every 10 ticks it targ
 
 Soulfire uses the final-form burn and visual effects.
 
+## Soulfire Final Form
+
+Soulfire upgrades every Fire ability: Aura pulses harder and lasts longer, Burst gains two projectiles, Implode pushes enemies away, and all burns use the longer final-form duration. The changes for each ability are described above.
+
 ---
 
 # Ice and Permafrost
@@ -531,6 +535,10 @@ movement speed = 20% × [min(2, floor(core rank / 3)) + 1]
 
 Singularity Rampage uses the same attribute formulas but stores one higher amplifier. While it is active, all incoming damage is accumulated and canceled. When it ends, the accumulated damage is applied directly to health but cannot reduce the player below 1 health point/half a heart.
 
+## Singularity Final Form
+
+Singularity strengthens Aegis, Burst, and Rampage. Aegis gains charges, Burst deals more damage and knockback, and Rampage absorbs incoming damage until it ends. The ability sections above give the exact values.
+
 ---
 
 # Blood and Bloodfire
@@ -558,6 +566,10 @@ Bloodfire projectiles ignite struck targets for 10 seconds and gain the two fina
 Raycasts for the first living target within `scaled radius + 12` blocks and a 0.75-block hit radius. It channels for at least 40 ticks and normally the scaled configured duration. Every 10 ticks/0.5 seconds it deals `max(1, 35% of scaled damage)` and heals the caster for half the health actually removed. The channel ends if the target dies, disappears, or leaves range.
 
 Bloodfire continuously ignites the target for 10 seconds.
+
+## Bloodfire Final Form
+
+Bloodfire adds fire effects to every Blood ability: Heal ignites nearby enemies and grants Fire Resistance, Cleanse transfers harmful effects, Burst gains fiery projectiles, and Drain keeps its target burning. The ability sections above give the exact values.
 
 ---
 

@@ -8,7 +8,7 @@ const LinkCard = ({ icon: Icon, title, subtitle, to }) => {
   return (
     <Link 
       to={to} 
-      className={`flex items-center justify-between bg-base-300 rounded-xl p-4 cursor-pointer AH-Expand transition`}
+      className={`flex items-center justify-between bg-base-300 rounded-xl p-4 cursor-pointer AH-Expand AH-CardOutline transition`}
     >
       <div className="flex items-center gap-3 text-primary font-bold text-lg">
 
@@ -32,7 +32,7 @@ const LinkCard = ({ icon: Icon, title, subtitle, to }) => {
 
 
       <ChevronRight 
-        className={`text-primary ${hasIcon ? "max-[550px]:hidden" : ""}`} 
+        className={`text-primary micro-arrow ${hasIcon ? "max-[550px]:hidden" : ""}`}
         size={20} 
       />
     </Link>

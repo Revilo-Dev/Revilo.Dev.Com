@@ -280,6 +280,16 @@ ANIMATIONS - All animation classes
     animation: hoverExpand 0.3s ease-out forwards;
   }
 
+  .AH-CardOutline {
+    border: 1px solid transparent;
+    transition: border-color 0.18s ease-out;
+  }
+
+  .AH-CardOutline:hover,
+  .AH-CardOutline:focus-within {
+    border-color: var(--color-primary);
+  }
+
 /* Shrink ---------------------------------------------------------------*/
   @keyframes hoverShrink {
     from {

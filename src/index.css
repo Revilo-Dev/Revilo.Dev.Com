@@ -47,6 +47,21 @@ nav {
   backdrop-filter: blur(12px);
 }
 
+.nav-tab { transition: background-color .18s ease, color .18s ease, transform .16s ease; }
+.nav-tab .icon { transition: transform .2s cubic-bezier(.2, 1.3, .4, 1), color .18s ease; }
+.nav-tab:hover .icon, .nav-tab:focus-visible .icon { transform: translateY(-2px) scale(1.08); }
+.nav-tab:active { transform: scale(.95); }
+.nav-tab:active .icon { transform: rotate(-10deg) scale(.78); }
+.nav-tab-active { color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 14%, var(--color-base-300)); }
+.nav-tab-active .icon { animation: nav-icon-in .26s ease-out both; }
+@keyframes nav-icon-in { from { transform: translateY(3px) scale(.75); opacity: .65; } to { transform: translateY(0) scale(1); opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-tab, .nav-tab .icon { transition: none; }
+  .nav-tab-active .icon { animation: none; }
+  .nav-tab:active, .nav-tab:hover .icon, .nav-tab:focus-visible .icon, .nav-tab:active .icon { transform: none; }
+}
+
 .ThemeButton {
   position: fixed;
   bottom: 16px;

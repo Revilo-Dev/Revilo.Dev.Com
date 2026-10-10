@@ -1,6 +1,7 @@
 import React from 'react';
 import ModWiki from '../wiki/ModWiki.jsx';
 import { resolveWikiLink, wikiBase, wikiGroups, wikiPageBySlug, wikiPages } from './auraData.js';
+import { auraIcon, auraTopicIcon } from './auraIcons.js';
 
 function AuraWiki() {
   return <ModWiki
@@ -11,6 +12,9 @@ function AuraWiki() {
     pages={wikiPages}
     pageBySlug={wikiPageBySlug}
     resolveLink={resolveWikiLink}
+    tableIcon={auraIcon}
+    headingIcon={auraIcon}
+    topicIcon={auraTopicIcon}
     heroDescription="Skills, elemental abilities, progression, controls, and configuration for Aura."
     introTitle="Level UP | Learn Unique abilities | Upgrade Powerful skills"
     introDescription="Aura adds permanent passive skills and seven elemental ability trees. Earn points through LevelUP, upgrade your build, then choose the active powers you want to cast."

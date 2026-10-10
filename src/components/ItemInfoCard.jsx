@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ItemInfoCard = ({ img, title, row1, row2, linkUrl, linkname, policyLinkUrl, policyLinkName }) => {
   return (
-    <div className="bg-base-300 rounded-xl shadow-lg p-4 flex flex-col items-center AH-Expand transition w-full">
+    <div className="bg-base-300 rounded-xl shadow-lg p-4 flex flex-col items-center AH-Expand AH-CardOutline transition w-full">
       <div className="w-full flex flex-col items-center">
         <img
           src={img}

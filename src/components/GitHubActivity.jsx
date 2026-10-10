@@ -120,10 +120,9 @@ function GitHubActivity() {
         <span className="github-profile-details">
           <strong>{data.profile.name || data.profile.login}</strong>
           <small>@{data.profile.login}</small>
-          {data.profile.bio && <span>{data.profile.bio}</span>}
-          <span className="github-profile-stats">{data.profile.public_repos} public repositories · {data.profile.followers} followers</span>
+          <span className="github-profile-stats"><span className="micro-count" key={`repos-${data.profile.public_repos}`}>{data.profile.public_repos}</span> public repositories · <span className="micro-count" key={`followers-${data.profile.followers}`}>{data.profile.followers}</span> followers</span>
         </span>
-        <ArrowUpRight size={19} aria-hidden="true" />
+        <ArrowUpRight className="micro-arrow" size={19} aria-hidden="true" />
       </a>
 
       <div className="github-activity-list">
@@ -133,11 +132,11 @@ function GitHubActivity() {
           return <a className="github-event bg-base-300" key={event.id} href={eventLink(event)} target="_blank" rel="noreferrer">
             <span className="github-event-icon"><Icon size={19} /></span>
             <span className="github-event-content"><span className="github-event-meta">{label} · {event.repo?.name?.split('/')[1]}</span><strong>{title}</strong><time dateTime={event.created_at}>{formatDate(event.created_at)}</time></span>
-            <ArrowUpRight size={18} aria-hidden="true" />
+            <ArrowUpRight className="micro-arrow" size={18} aria-hidden="true" />
           </a>;
         }) : <p className="github-activity-empty">No recent public activity. <a href={PROFILE_URL} target="_blank" rel="noreferrer">View the GitHub profile</a>.</p>}
       </div>
-      <p className="github-activity-note">{error || `Updated ${formatUpdateTime(data.fetchedAt)} · Checks every hour`}</p>
+      <p className="github-activity-note">{error || `Updated ${formatUpdateTime(data.fetchedAt)} ·  Updates hourly`}</p>
     </> : loading ? <p className="github-activity-empty bg-base-300">Loading GitHub profile and activity…</p> : <p className="github-activity-empty bg-base-300">{error} <a href={PROFILE_URL} target="_blank" rel="noreferrer">View the GitHub profile</a>.</p>}
   </section>;
 }

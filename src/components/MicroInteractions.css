@@ -1,0 +1,6 @@
+.micro-count { display: inline-block; font-variant-numeric: tabular-nums; animation: micro-count-in .35s cubic-bezier(.2, 1.3, .4, 1) both; }
+.micro-arrow { transition: transform .18s cubic-bezier(.2, 1.3, .4, 1); }
+a:hover .micro-arrow, a:focus-visible .micro-arrow, button:hover .micro-arrow { transform: translate(3px, -2px); }
+a:active .micro-arrow, button:active .micro-arrow { transform: translate(5px, -2px) scale(.85); }
+@keyframes micro-count-in { from { opacity: .45; transform: translateY(5px) scale(.92); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .micro-count { animation: none; } .micro-arrow { transition: none; } a:hover .micro-arrow, a:focus-visible .micro-arrow, a:active .micro-arrow, button:hover .micro-arrow, button:active .micro-arrow { transform: none; } }

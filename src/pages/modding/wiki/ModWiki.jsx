@@ -11,7 +11,7 @@ function headingText(children) {
   return React.Children.toArray(children).map((child) => typeof child === 'string' ? child : headingText(child.props?.children)).join('');
 }
 
-function WikiArticle({ page, resolveLink }) {
+function WikiArticle({ page, resolveLink, tableIcon, tableIconColumns, headingIcon }) {
   return <div className="wiki-article">
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -23,15 +23,25 @@ function WikiArticle({ page, resolveLink }) {
           const destination = resolveLink(href);
           return destination?.startsWith('/') ? <Link to={destination} {...props}>{children}</Link> : <a href={destination} {...props}>{children}</a>;
         },
-        h2: ({ children }) => <h2 id={slugify(headingText(children))}>{children}</h2>,
+        h2: ({ children }) => {
+          const title = headingText(children);
+          const icon = headingIcon?.(title);
+          return <h2 id={slugify(title)}>{icon && <img className="wiki-heading-icon" src={icon} alt="" loading="lazy" />}{children}</h2>;
+        },
         h3: ({ children }) => <h3 id={slugify(headingText(children))}>{children}</h3>,
         table: ({ children }) => <div className="wiki-table-scroll"><table>{children}</table></div>,
+        tr: ({ children }) => <tr>{React.Children.map(children, (cell, columnIndex) => React.isValidElement(cell) ? React.cloneElement(cell, { columnIndex }) : cell)}</tr>,
+        th: ({ children, style }) => <th style={style}>{children}</th>,
+        td: ({ children, columnIndex, style }) => {
+          const icon = (!tableIconColumns || tableIconColumns.includes(columnIndex)) && tableIcon?.(headingText(children));
+          return <td style={style}>{icon && <img className="wiki-table-icon" src={icon} alt="" loading="lazy" />}{children}</td>;
+        },
       }}
     >{page.content}</ReactMarkdown>
   </div>;
 }
 
-function ModWiki({ name, image, base, groups, pages, pageBySlug, resolveLink, heroDescription, introTitle, introDescription, sourceNote, startPageSlug = 'getting-started' }) {
+function ModWiki({ name, image, base, groups, pages, pageBySlug, resolveLink, tableIcon, tableIconColumns, headingIcon, topicIcon, heroDescription, introTitle, introDescription, sourceNote, startPageSlug = 'getting-started' }) {
   const { slug } = useParams();
   const location = useLocation();
   const page = slug ? pageBySlug[slug] : null;
@@ -87,12 +97,12 @@ function ModWiki({ name, image, base, groups, pages, pageBySlug, resolveLink, he
         {page ? <>
           <article className="wiki-panel bg-base-300">
             <div className="wiki-article-heading"><span>{page.group}</span><h2>{page.title}</h2><p>{page.summary}</p></div>
-            <WikiArticle page={page} resolveLink={resolveLink} />
+            <WikiArticle page={page} resolveLink={resolveLink} tableIcon={tableIcon} tableIconColumns={tableIconColumns} headingIcon={headingIcon} />
           </article>
-          <section className="wiki-related bg-base-300" aria-label="Related pages"><h2>Related pages</h2><div>{page.related.map((relatedSlug) => { const related = pageBySlug[relatedSlug]; return <Link key={relatedSlug} to={`${base}/${relatedSlug}`}><span><strong>{related.title}</strong><small>{related.summary}</small></span><ArrowRight size={18} /></Link>; })}</div></section>
+          <section className="wiki-related bg-base-300" aria-label="Related pages"><h2>Related pages</h2><div>{page.related.map((relatedSlug) => { const related = pageBySlug[relatedSlug]; return <Link key={relatedSlug} to={`${base}/${relatedSlug}`}><span><strong>{related.title}</strong><small>{related.summary}</small></span><ArrowRight className="micro-arrow" size={18} /></Link>; })}</div></section>
         </> : <>
-          <section className="wiki-intro bg-base-300"><p className="wiki-eyebrow">START HERE</p><h2>{introTitle}</h2><p>{introDescription}</p>{sourceNote && <p className="wiki-source-note">{sourceNote}</p>}<Link className="btn btn-primary" to={`${base}/${startPageSlug}`}>Read Getting Started <ArrowRight size={17} /></Link></section>
-          {groups.map((group) => <section className="wiki-section" key={group}><h2>{group}</h2><div className="wiki-card-grid">{pages.filter((item) => item.group === group).map((item) => <Link className="wiki-topic-card bg-base-300" key={item.slug} to={`${base}/${item.slug}`}><span className="wiki-topic-icon"><BookOpen size={19} /></span><strong>{item.title}</strong><p>{item.summary}</p><span className="wiki-card-action">Read page <ArrowRight size={16} /></span></Link>)}</div></section>)}
+          <section className="wiki-intro bg-base-300"><p className="wiki-eyebrow">START HERE</p><h2>{introTitle}</h2><p>{introDescription}</p>{sourceNote && <p className="wiki-source-note">{sourceNote}</p>}<Link className="btn btn-primary" to={`${base}/${startPageSlug}`}>Read {pageBySlug[startPageSlug]?.title || 'Getting Started'} <ArrowRight className="micro-arrow" size={17} /></Link></section>
+          {groups.map((group) => <section className="wiki-section" key={group}><h2>{group}</h2><div className="wiki-card-grid">{pages.filter((item) => item.group === group).map((item) => <Link className="wiki-topic-card bg-base-300" key={item.slug} to={`${base}/${item.slug}`}><span className="wiki-topic-icon">{topicIcon?.(item) ? <img src={topicIcon(item)} alt="" loading="lazy" /> : <BookOpen size={19} />}</span><strong>{item.title}</strong><p>{item.summary}</p><span className="wiki-card-action">Read page <ArrowRight className="micro-arrow" size={16} /></span></Link>)}</div></section>)}
         </>}
       </div>
     </div>

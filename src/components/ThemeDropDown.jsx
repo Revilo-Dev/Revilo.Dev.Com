@@ -1,49 +1,65 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useThemeStore from '../store/ThemeStore.js';
-import { LayoutGrid } from 'lucide-react';
+import { Check, Palette } from 'lucide-react';
+import './ThemeDropDown.css';
 
+const themes = [
+  'light', 'dark', 'coffee', 'caramellatte', 'business', 'corporate',
+  'lofi', 'black', 'nord', 'luxury', 'dim', 'sunset',
+];
+
+const themeLabel = (name) => name === 'caramellatte' ? 'Caramel Latte' : name.replace(/^./, (letter) => letter.toUpperCase());
 
 function ThemeDropdown() {
-  const { setTheme } = useThemeStore();
+  const { theme, setTheme } = useThemeStore();
+  const [open, setOpen] = useState(false);
+  const pickerRef = useRef(null);
+  const triggerRef = useRef(null);
 
-  const themeList = [
-    "light", "dark", "coffee", "caramellatte", "business", "corporate", "lofi",  "black", "nord", "luxury",
-     "dim", "sunset",
-  ];
+  useEffect(() => {
+    if (!open) return undefined;
+    const closeOnOutsideClick = (event) => {
+      if (!pickerRef.current?.contains(event.target)) setOpen(false);
+    };
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [open]);
 
-  return (
-    <div className="ml-auto">
-      <div className="dropdown dropdown-top">
-        <div tabIndex={0} role="button" className=" ThemeBtn btn btn-primary AH-Pulse">
-        <LayoutGrid />
-        </div>
-        <ul
-          tabIndex={0}
-          className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 max-h-96 overflow-y-auto sm:w-64 md:w-72 A-SlideUpBounce"
+  const chooseTheme = (name) => {
+    setTheme(name);
+    setOpen(false);
+    triggerRef.current?.focus();
+  };
+
+  return <div className="theme-picker" ref={pickerRef}>
+    {open && <div className="theme-picker-panel bg-base-100" id="theme-picker-panel" role="group" aria-label="Choose a theme">
+      <div className="theme-picker-heading"><div><strong>Choose a theme</strong><span>Current: {themeLabel(theme)}</span></div><Palette size={19} aria-hidden="true" /></div>
+      <div className="theme-picker-grid">
+        {themes.map((name) => <button
+          key={name}
+          type="button"
+          className={`theme-option ${theme === name ? 'is-selected' : ''}`}
+          onClick={() => chooseTheme(name)}
+          aria-pressed={theme === name}
         >
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-3 md:grid-cols-3">
-            {themeList.map((themeName) => (
-              <button
-                key={themeName}
-                className={`flex flex-col items-center justify-center AH-Expand p-2 rounded-md shadow-sm transition-colors text-sm capitalize ${themeName}`}
-                onClick={() => setTheme(themeName)}
-                style={{ color: 'inherit', backgroundColor: 'var(--b1)' }}
-              >
-                <div className="relative h-6 w-10 rounded-md overflow-hidden mb-1" data-theme={themeName}>
-                  <div className="absolute inset-0 grid grid-cols-3 gap-px p-px">
-                    <div className="bg-primary rounded-sm"></div>
-                    <div className="bg-secondary rounded-sm"></div>
-                    <div className="bg-accent rounded-sm"></div>
-                  </div>
-                </div>
-                {themeName}
-              </button>
-            ))}
-          </div>
-        </ul>
+          <span className="theme-option-preview" data-theme={name} aria-hidden="true"><span /><span /><span /></span>
+          <span className="theme-option-name">{themeLabel(name)}</span>
+          {theme === name && <Check size={15} aria-hidden="true" />}
+        </button>)}
       </div>
-    </div>
-  );
+    </div>}
+    <button ref={triggerRef} type="button" className={`theme-picker-trigger btn btn-primary ${open ? 'is-open' : ''}`} onClick={() => setOpen((value) => !value)} aria-label="Choose theme" aria-expanded={open} aria-controls="theme-picker-panel" title={`Theme: ${themeLabel(theme)}`}><Palette size={20} aria-hidden="true" /></button>
+  </div>;
 }
 
 export default ThemeDropdown;

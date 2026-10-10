@@ -85,14 +85,16 @@ function Modding() {
             <ItemCard
             image="/assets/arsenal.png"
             title="Arsenal: Weaponry"
-            links={[              
+            links={[
+              { label: 'Wiki', to: '/projects/arsenal/wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/arsenal-weaponry', icon: LinkIcon },
             ]}
           />
             <ItemCard
-            image="/assets/gatesavarice.png"
+            image="/assets/re-enforced.png"
             title="Re-Enforced: Metals"
-            links={[          
+            links={[
+              { label: 'Wiki', to: '/projects/enforced/wiki', icon: BookOpen },
               { label: 'Link', to: 'https://www.curseforge.com/minecraft/mc-mods/re-enforced-metals', icon: LinkIcon },
             ]}
           />

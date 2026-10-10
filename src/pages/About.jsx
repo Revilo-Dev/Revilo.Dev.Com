@@ -68,15 +68,15 @@ function About() {
     <HeaderCard />
     <main className="about-page">
     <section className="about-achievements A-SlideDownBounce" aria-label="Highlights">
-      <div><strong>1.2M+</strong><span>downloads across published projects</span></div>
-      <div><strong>{repoCount ?? '—'}</strong><span>public GitHub repositories</span></div>
-      <div><strong>2022</strong><span>the year I started publishing Minecraft projects</span></div>
+      <div><strong className="micro-count">1.2M+</strong><span>downloads across published projects</span></div>
+      <div><strong className="micro-count" key={repoCount ?? 'loading'}>{repoCount ?? '—'}</strong><span>public GitHub repositories</span></div>
+      <div><strong className="micro-count">2022</strong><span>Modding since</span></div>
     </section>
 
     <section className="about-work A-SlideUpBounce" aria-labelledby="about-work-heading">
       <div className="about-section-heading">
         <div><h2 id="about-work-heading">Main areas of development</h2></div>
-        <Link to="/projects">See all projects <ArrowRight size={17} /></Link>
+        <Link to="/projects">See all projects <ArrowRight className="micro-arrow" size={17} /></Link>
       </div>
       <div className="about-work-grid">
         {work.map(({ title, icon, description, projects }) => <article className="about-work-card bg-base-300" key={title}>
@@ -85,7 +85,7 @@ function About() {
           <p>{description}</p>
           <div className="about-project-links">
             {projects.map((project) => <a href={project.url} target="_blank" rel="noreferrer" key={project.name}>
-              <span><strong>{project.name}</strong><small>{project.detail}</small></span><ArrowUpRight size={18} aria-hidden="true" />
+              <span><strong>{project.name}</strong><small>{project.detail}</small></span><ArrowUpRight className="micro-arrow" size={18} aria-hidden="true" />
             </a>)}
           </div>
         </article>)}
@@ -96,7 +96,7 @@ function About() {
       <div className="about-section-heading"><h2 id="about-software-heading">What I use</h2></div>
       <div className="about-software-grid">
         {software.map((tool) => <a className="about-software-card bg-base-300" href={tool.url} target="_blank" rel="noreferrer" key={tool.name}>
-          <span><strong>{tool.name}</strong><small>{tool.detail}</small></span><ArrowUpRight size={19} aria-hidden="true" />
+          <span><strong>{tool.name}</strong><small>{tool.detail}</small></span><ArrowUpRight className="micro-arrow" size={19} aria-hidden="true" />
         </a>)}
       </div>
     </section>
